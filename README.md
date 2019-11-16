@@ -7,8 +7,8 @@
 ```julia
 julia> using EmojiSymbols
 
-julia> \:thinking_face:   # <TAB>
-🤔
+julia> \:thinking_face:<TAB>
+julia> 🤔
 ```
 
 
