@@ -1,0 +1,15 @@
+name = "EmojiSymbols"
+uuid = "c599478c-de41-4aed-94ea-b47665d7a42a"
+authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
+version = "0.1.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+REPL = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
+Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+
+[targets]
+test = ["Test", "REPL", "Jive"]
+
+[compat]
+julia = "1"
