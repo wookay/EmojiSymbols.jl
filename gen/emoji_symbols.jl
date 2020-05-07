@@ -74,6 +74,7 @@ const emoji_symbols = Dict{String,String}(
     "\\:dumpling:" => "🥟",
     "\\:eagle:" => "🦅",
     "\\:ear_with_hearing_aid:" => "🦻",
+    "\\:egg:" => "🥚",
     "\\:elf:" => "🧝",
     "\\:exploding_head:" => "🤯",
     "\\:face_palm:" => "🤦",

@@ -16,38 +16,46 @@ for emj in emojis
     if '-' in unicode
         continue
     end
-    if !haskey(repl_emoji_symbols, name)
-        result[name] = "$(Char(parse(UInt32, unicode, base = 16)))"
+    push_emoji = false
+    emoji = string(Char(parse(UInt32, unicode, base = 16)))
+    if haskey(repl_emoji_symbols, name)
+        if repl_emoji_symbols[name] != emoji # \:egg: 🍳 🥚
+            push_emoji = true
+        end
+    else
+        push_emoji = true
+    end
+    if push_emoji
+        result[name] = emoji
     end
 end
 
 skeys = sort(collect(keys(result)))
-
 open(normpath(@__DIR__, "emoji_symbols.jl"), "w") do fh
     println(fh, "# generated")
     println(fh, "const emoji_symbols = Dict{String,String}(")
     for key in skeys
-        println(fh, "    \"", escape_string(key), "\" => \"",
-                 escape_string(result[key]), "\",")
+        println(fh, "    \"", escape_string(key), "\" => \"", escape_string(result[key]), "\",")
     end
     println(fh, ")")
 end
 
-open(normpath(@__DIR__, "../docs/src/additional_symbols.md"), "w") do fh
-    println(fh, "### additional Emoji symbols")
-    println(fh, "| short name | unicode |")
-    println(fh, "|------------|---------|")
-    for key in skeys
-        println(fh, "| `", key, "` | ", escape_string(result[key]), " |")
+function gen_doc(docfile, title, dict)
+    skeys = sort(collect(keys(dict)))
+    open(normpath(@__DIR__, docfile), "w") do fh
+        println(fh, title)
+        println(fh, "| short name | unicode |")
+        println(fh, "|------------|---------|")
+        for key in skeys
+            println(fh, "| `", key, "` | ", escape_string(dict[key]), " |")
+        end
+        println(fh)
+        for emoji in sort(collect(values(dict)))
+            print(fh, emoji, " ")
+        end
+        println(fh)
     end
 end
 
-repl_skeys = sort(collect(keys(repl_emoji_symbols)))
-open(normpath(@__DIR__, "../docs/src/symbols_in_repl.md"), "w") do fh
-    println(fh, "### Emoji symbols in REPL")
-    println(fh, "| short name | unicode |")
-    println(fh, "|------------|---------|")
-    for key in repl_skeys
-        println(fh, "| `", key, "` | ", escape_string(repl_emoji_symbols[key]), " |")
-    end
-end
+gen_doc("../docs/src/additional_symbols.md", "### additional Emoji symbols", result)
+gen_doc("../docs/src/symbols_in_repl.md",    "### Emoji symbols in REPL",    repl_emoji_symbols)
