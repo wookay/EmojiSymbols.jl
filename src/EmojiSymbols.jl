@@ -32,10 +32,6 @@ function show_char(io::IO, ::MIME"text/plain", c::T) where {T<:AbstractChar}
     print(io, " (category ", abr, ": ", str, ")")
 end
 
-symbol_table = Dict{Char,String}(
-    '🤔' => "\\:thinking_face:",
-)
-
 function Base.show(io::IO, mime::MIME"text/plain", c::Char)
     n = UInt32(c)
     if 0x00a9 <= n <= 0x3299 || 0x1f004 <= n <= 0x1fa95
