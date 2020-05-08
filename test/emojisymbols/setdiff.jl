@@ -14,4 +14,7 @@ s2 = values(EmojiSymbols.emoji_symbols)
 @test isempty(intersect(legacy_emoji, s2))
 @test REPL.REPLCompletions.emoji_symbols["\\:thinking_face:"] == "🤔"
 
+@test EmojiSymbols.emoji_name_table['🤔'] == "\\:thinking_face:"
+@test sprint(show, MIME"text/plain"(), '🤔') == "\\:thinking_face: '🤔': Unicode U+1F914 (category So: Symbol, other)"
+
 end # module test_emojisymbols_setdiff
