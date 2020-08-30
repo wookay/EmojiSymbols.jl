@@ -1,10 +1,10 @@
 name = "EmojiSymbols"
 uuid = "c599478c-de41-4aed-94ea-b47665d7a42a"
-keywords = ["emoji", "REPL"]
+keywords = ["emoji", "latex", "REPL"]
 license = "MIT"
 desc = "additional Emoji symbols for Julia REPL 🤔"
 authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [compat]
 julia = "1"
