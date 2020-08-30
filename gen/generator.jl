@@ -50,9 +50,13 @@ end
 
 open(normpath(@__DIR__, "latex_name_table.jl"), "w") do fh
     println(fh, "# generated")
-    println(fh, "const latex_name_table = Dict{Char, String}(")
+    println(fh, "const latex_name_table = Dict{Union{Char,String}, String}(")
     for (name, latex) in repl_latex_symbols
-        println(fh, "    ", repr(first(latex)), " => ", repr(name), ",")
+        if (isone ∘ length)(latex)
+            println(fh, "    ", repr(first(latex)), " => ", repr(name), ",")
+        else
+            println(fh, "    ", repr(latex), " => ", repr(name), ",")
+        end
     end
     println(fh, ")")
 end

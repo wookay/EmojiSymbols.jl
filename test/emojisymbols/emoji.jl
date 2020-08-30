@@ -16,5 +16,6 @@ s2 = values(EmojiSymbols.emoji_symbols)
 
 @test EmojiSymbols.emoji_name_table['🤔'] == "\\:thinking_face:"
 @test sprint(show, MIME"text/plain"(), '🤔') == "\\:thinking_face: '🤔': Unicode U+1F914 (category So: Symbol, other)"
+@test sprint(show, MIME"text/plain"(), "🤔") == "\\:thinking_face: \"🤔\""
 
 end # module test_emojisymbols_emoji
