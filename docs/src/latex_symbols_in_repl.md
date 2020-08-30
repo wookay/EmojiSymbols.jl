@@ -94,14 +94,14 @@
 | `\Nearrow` | ⇗ |
 | `\NestedGreaterGreater` | ⪢ |
 | `\NestedLessLess` | ⪡ |
-| `\NotGreaterGreater` | ≫̸ |
-| `\NotLeftTriangleBar` | ⧏̸ |
-| `\NotLessLess` | ≪̸ |
-| `\NotNestedGreaterGreater` | ⪢̸ |
-| `\NotNestedLessLess` | ⪡̸ |
-| `\NotRightTriangleBar` | ⧐̸ |
-| `\NotSquareSubset` | ⊏̸ |
-| `\NotSquareSuperset` | ⊐̸ |
+| `\NotGreaterGreater` | "≫̸" |
+| `\NotLeftTriangleBar` | "⧏̸" |
+| `\NotLessLess` | "≪̸" |
+| `\NotNestedGreaterGreater` | "⪢̸" |
+| `\NotNestedLessLess` | "⪡̸" |
+| `\NotRightTriangleBar` | "⧐̸" |
+| `\NotSquareSubset` | "⊏̸" |
+| `\NotSquareSuperset` | "⊐̸" |
 | `\Nwarrow` | ⇖ |
 | `\O` | Ø |
 | `\OE` | Œ |
@@ -1202,7 +1202,7 @@
 | `\enclosesquare` | ⃞ |
 | `\enclosetriangle` | ⃤ |
 | `\endash` | – |
-| `\enspace` |   |
+| `\enspace` | ' ' == Char(0x2002) |
 | `\eparsl` | ⧣ |
 | `\epsilon` | ϵ |
 | `\eqcirc` | ≖ |
@@ -1337,7 +1337,7 @@
 | `\gtrsim` | ≳ |
 | `\guilsinglleft` | ‹ |
 | `\guilsinglright` | › |
-| `\gvertneqq` | ≩︀ |
+| `\gvertneqq` | "≩︀" |
 | `\hat` | ̂ |
 | `\hatapprox` | ⩯ |
 | `\hbar` | ħ |
@@ -1356,7 +1356,7 @@
 | `\hrectangle` | ▭ |
 | `\hrectangleblack` | ▬ |
 | `\hslash` | ℏ |
-| `\hspace` |   |
+| `\hspace` | ' ' == Char(0x200a) |
 | `\hvlig` | ƕ |
 | `\iff` | ⟺ |
 | `\iiiint` | ⨌ |
@@ -1674,7 +1674,7 @@
 | `\ltphi` | ɸ |
 | `\ltquest` | ⩻ |
 | `\lvboxline` | ⎸ |
-| `\lvertneqq` | ≨︀ |
+| `\lvertneqq` | "≨︀" |
 | `\male` | ♂ |
 | `\maltese` | ✠ |
 | `\mapsdown` | ↧ |
@@ -1725,7 +1725,7 @@
 | `\mp` | ∓ |
 | `\mu` | μ |
 | `\multimap` | ⊸ |
-| `\nBumpeq` | ≎̸ |
+| `\nBumpeq` | "≎̸" |
 | `\nHdownarrow` | ⇟ |
 | `\nHuparrow` | ⇞ |
 | `\nLeftarrow` | ⇍ |
@@ -1746,7 +1746,7 @@
 | `\napprox` | ≉ |
 | `\nasymp` | ≭ |
 | `\natural` | ♮ |
-| `\nbumpeq` | ≏̸ |
+| `\nbumpeq` | "≏̸" |
 | `\ncong` | ≇ |
 | `\ne` | ≠ |
 | `\nearrow` | ↗ |
@@ -1754,13 +1754,13 @@
 | `\neovnwarrow` | ⤱ |
 | `\neovsearrow` | ⤮ |
 | `\neptune` | ♆ |
-| `\neqsim` | ≂̸ |
+| `\neqsim` | "≂̸" |
 | `\nequiv` | ≢ |
 | `\neuter` | ⚲ |
 | `\nexists` | ∄ |
 | `\ng` | ŋ |
 | `\ngeq` | ≱ |
-| `\ngeqslant` | ⩾̸ |
+| `\ngeqslant` | "⩾̸" |
 | `\ngtr` | ≯ |
 | `\ngtrsim` | ≵ |
 | `\ni` | ∋ |
@@ -1770,7 +1770,7 @@
 | `\nleftarrow` | ↚ |
 | `\nleftrightarrow` | ↮ |
 | `\nleq` | ≰ |
-| `\nleqslant` | ⩽̸ |
+| `\nleqslant` | "⩽̸" |
 | `\nless` | ≮ |
 | `\nlesssim` | ≴ |
 | `\nmid` | ∤ |
@@ -1786,8 +1786,8 @@
 | `\npolint` | ⨔ |
 | `\nprec` | ⊀ |
 | `\npreccurlyeq` | ⋠ |
-| `\npreceq` | ⪯̸ |
-| `\nprecsim` | ≾̸ |
+| `\npreceq` | "⪯̸" |
+| `\nprecsim` | "≾̸" |
 | `\nrightarrow` | ↛ |
 | `\nrleg` | ƞ |
 | `\nsim` | ≁ |
@@ -1796,14 +1796,14 @@
 | `\nsqsupseteq` | ⋣ |
 | `\nsubset` | ⊄ |
 | `\nsubseteq` | ⊈ |
-| `\nsubseteqq` | ⫅̸ |
+| `\nsubseteqq` | "⫅̸" |
 | `\nsucc` | ⊁ |
 | `\nsucccurlyeq` | ⋡ |
-| `\nsucceq` | ⪰̸ |
-| `\nsuccsim` | ≿̸ |
+| `\nsucceq` | "⪰̸" |
+| `\nsuccsim` | "≿̸" |
 | `\nsupset` | ⊅ |
 | `\nsupseteq` | ⊉ |
-| `\nsupseteqq` | ⫆̸ |
+| `\nsupseteqq` | "⫆̸" |
 | `\ntriangleleft` | ⋪ |
 | `\ntrianglelefteq` | ⋬ |
 | `\ntriangleright` | ⋫ |
@@ -1917,7 +1917,7 @@
 | `\pscrv` | ʋ |
 | `\psi` | ψ |
 | `\pupsil` | ʊ |
-| `\quad` |   |
+| `\quad` | ' ' == Char(0x2003) |
 | `\quarternote` | ♩ |
 | `\questeq` | ≟ |
 | `\questiondown` | ¿ |
@@ -2248,8 +2248,8 @@
 | `\th` | þ |
 | `\therefore` | ∴ |
 | `\theta` | θ |
-| `\thickspace` |   |
-| `\thinspace` |   |
+| `\thickspace` | ' ' == Char(0x2005) |
+| `\thinspace` | ' ' == Char(0x2009) |
 | `\threedangle` | ⟀ |
 | `\threeunderdot` | ⃨ |
 | `\tieconcat` | ⁀ |
@@ -2443,8 +2443,8 @@
 | `\varsigma` | ς |
 | `\varspadesuit` | ♤ |
 | `\varstar` | ✶ |
-| `\varsubsetneqq` | ⊊︀ |
-| `\varsupsetneq` | ⊋︀ |
+| `\varsubsetneqq` | "⊊︀" |
+| `\varsupsetneq` | "⊋︀" |
 | `\vartheta` | ϑ |
 | `\vartriangle` | ▵ |
 | `\vartriangleleft` | ⊲ |

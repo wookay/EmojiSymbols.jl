@@ -74,7 +74,19 @@ function gen_doc(docfile, title, dict)
         println(fh, "| short name | unicode |")
         println(fh, "|------------|---------|")
         for key in skeys
-            println(fh, "| `", key, "` | ", escape_string(dict[key]), " |")
+            print(fh, "| `", key, "` | ")
+            val = dict[key]
+            if (isone ∘ length)(val)
+                c = first(val)
+                if isspace(c)
+                    print(fh, string("'", c, "'", " == Char(0x", string(codepoint(c), base=16), ")"))
+                else
+                    print(fh, escape_string(val))
+                end
+            else
+                print(fh, '"', escape_string(val), '"')
+            end
+            println(fh, " |")
         end
         println(fh)
         for emoji in sort(collect(values(dict)))
