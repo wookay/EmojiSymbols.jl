@@ -4,7 +4,7 @@ keywords = ["emoji", "latex", "REPL"]
 license = "MIT"
 desc = "additional Emoji symbols for Julia REPL 🤔"
 authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
-version = "0.1.4"
+version = "0.1.5"
 
 [compat]
 julia = "1"
