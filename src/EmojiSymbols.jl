@@ -7,6 +7,10 @@ include(normpath(@__DIR__, "../gen/latex_name_table.jl"))
 function __init__()
     REPL = Base.REPL_MODULE_REF[]
     merge!(REPL.REPLCompletions.emoji_symbols, emoji_symbols)
+    REPL.symbol_latex("")
+    for (k, v) in (VERSION < v"1.6.0-DEV.771" ? REPL.REPLCompletions.emoji_symbols : emoji_symbols)
+        REPL.symbols_latex[v] = k
+    end
 end
 
 # from julia/base/char.jl
