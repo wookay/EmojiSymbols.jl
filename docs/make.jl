@@ -14,6 +14,7 @@ makedocs(
     pages = Any[
         "Home" => "index.md",
         "additional Emoji symbols" => "additional_symbols.md",
-        "Emoji symbols in REPL" => "symbols_in_repl.md",
+        "Emoji symbols in REPL" => "emoji_symbols_in_repl.md",
+        "LaTeX symbols in REPL" => "latex_symbols_in_repl.md",
     ],
 )

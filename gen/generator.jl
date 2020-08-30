@@ -8,6 +8,7 @@ emojis = JSON.parsefile(download("https://raw.githubusercontent.com/iamcal/emoji
 
 using REPL
 repl_emoji_symbols = REPL.REPLCompletions.emoji_symbols
+repl_latex_symbols = REPL.REPLCompletions.latex_symbols
 
 result = Dict{String, String}()
 symbol_table = Dict{Char, String}()
@@ -47,6 +48,15 @@ open(normpath(@__DIR__, "emoji_name_table.jl"), "w") do fh
     println(fh, ")")
 end
 
+open(normpath(@__DIR__, "latex_name_table.jl"), "w") do fh
+    println(fh, "# generated")
+    println(fh, "const latex_name_table = Dict{Char, String}(")
+    for (name, latex) in repl_latex_symbols
+        println(fh, "    ", repr(first(latex)), " => ", repr(name), ",")
+    end
+    println(fh, ")")
+end
+
 skeys = sort(collect(keys(result)))
 open(normpath(@__DIR__, "emoji_symbols.jl"), "w") do fh
     println(fh, "# generated")
@@ -74,5 +84,6 @@ function gen_doc(docfile, title, dict)
     end
 end
 
-gen_doc("../docs/src/additional_symbols.md", "### additional Emoji symbols", result)
-gen_doc("../docs/src/symbols_in_repl.md",    "### Emoji symbols in REPL",    repl_emoji_symbols)
+gen_doc("../docs/src/additional_symbols.md",    "### additional Emoji symbols", result)
+gen_doc("../docs/src/emoji_symbols_in_repl.md", "### Emoji symbols in REPL",    repl_emoji_symbols)
+gen_doc("../docs/src/latex_symbols_in_repl.md", "### LaTeX symbols in REPL",    repl_latex_symbols)

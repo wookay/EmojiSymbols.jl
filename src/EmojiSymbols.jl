@@ -2,6 +2,7 @@ module EmojiSymbols
 
 include(normpath(@__DIR__, "../gen/emoji_symbols.jl"))
 include(normpath(@__DIR__, "../gen/emoji_name_table.jl"))
+include(normpath(@__DIR__, "../gen/latex_name_table.jl"))
 
 function __init__()
     REPL = Base.REPL_MODULE_REF[]
@@ -32,10 +33,23 @@ function show_char(io::IO, ::MIME"text/plain", c::T) where {T<:AbstractChar}
     print(io, " (category ", abr, ": ", str, ")")
 end
 
+# emoji ranges
+#     0x00a9 <= n <= 0x00ae || 0x200d <= n <= 0x3299 || 0x1f004 <= n <= 0x1f251 || 0x1f300 <= n <= 0x1fad6
+# latex ranges
+#     0x00a1 <= n <= 0x03f6 || 0x1d2c <= 0x1dbf || 0x2002 <= n <= 0x3012 || 0x1d400 <= n <= 0x1d7ff
 function Base.show(io::IO, mime::MIME"text/plain", c::Char)
     n = UInt32(c)
-    if 0x00a9 <= n <= 0x3299 || 0x1f004 <= n <= 0x1fa95
+    if 0x1f004 <= n <= 0x1f251 || 0x1f300 <= n <= 0x1fad6
         haskey(emoji_name_table, c) && printstyled(io, emoji_name_table[c], ' ', color=:cyan)
+    elseif 0x1d2c <= 0x1dbf || 0x1d400 <= n <= 0x1d7ff
+        haskey(latex_name_table, c) && printstyled(io, latex_name_table[c], ' ', color=:cyan)
+    elseif 0x00a9 <= n <= 0x00ae || 0x200d <= n <= 0x3299 ||   # emoji
+           0x00a1 <= n <= 0x03f6 || 0x2002 <= n <= 0x3012      # latex
+        if haskey(emoji_name_table, c)
+            printstyled(io, emoji_name_table[c], ' ', color=:cyan)
+        elseif haskey(latex_name_table, c)
+            printstyled(io, latex_name_table[c], ' ', color=:cyan)
+        end
     end
     show_char(io, mime, c)
 end

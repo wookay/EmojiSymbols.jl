@@ -1,4 +1,4 @@
-module test_emojisymbols_setdiff
+module test_emojisymbols_emoji
 
 using Test
 
@@ -17,4 +17,4 @@ s2 = values(EmojiSymbols.emoji_symbols)
 @test EmojiSymbols.emoji_name_table['🤔'] == "\\:thinking_face:"
 @test sprint(show, MIME"text/plain"(), '🤔') == "\\:thinking_face: '🤔': Unicode U+1F914 (category So: Symbol, other)"
 
-end # module test_emojisymbols_setdiff
+end # module test_emojisymbols_emoji
