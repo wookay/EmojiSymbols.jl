@@ -36,12 +36,12 @@ end
 # emoji ranges
 #     0x00a9 <= n <= 0x00ae || 0x200d <= n <= 0x3299 || 0x1f004 <= n <= 0x1f251 || 0x1f300 <= n <= 0x1fad6
 # latex ranges
-#     0x00a1 <= n <= 0x03f6 || 0x1d2c <= 0x1dbf || 0x2002 <= n <= 0x3012 || 0x1d400 <= n <= 0x1d7ff
+#     0x00a1 <= n <= 0x03f6 || 0x1d2c <= n <= 0x1dbf || 0x2002 <= n <= 0x3012 || 0x1d400 <= n <= 0x1d7ff
 function lookup_and_show_short_name(io::IO, ::MIME"text/plain", c::Char)
     n = UInt32(c)
     if 0x1f004 <= n <= 0x1f251 || 0x1f300 <= n <= 0x1fad6
         haskey(emoji_name_table, c) && printstyled(io, emoji_name_table[c], ' ', color=:cyan)
-    elseif 0x1d2c <= 0x1dbf || 0x1d400 <= n <= 0x1d7ff
+    elseif 0x1d2c <= n <= 0x1dbf || 0x1d400 <= n <= 0x1d7ff
         haskey(latex_name_table, c) && printstyled(io, latex_name_table[c], ' ', color=:cyan)
     elseif 0x00a9 <= n <= 0x00ae || 0x200d <= n <= 0x3299 ||   # emoji
            0x00a1 <= n <= 0x03f6 || 0x2002 <= n <= 0x3012      # latex
