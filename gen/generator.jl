@@ -93,10 +93,12 @@ function gen_doc(docfile, title, dict)
             println(fh, " |")
         end
         println(fh)
-        for emoji in sort(collect(values(dict)))
-            print(fh, emoji, " ")
+        println(fh, "```@raw html")
+        for (name, emoji) in sort(collect(dict), by=last)
+            title = replace(name, '\\' => "&#92;")
+            println(fh, """<span title="$title">$emoji</span>""")
         end
-        println(fh)
+        println(fh, "```")
     end
 end
 
