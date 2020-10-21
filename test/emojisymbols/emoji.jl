@@ -19,4 +19,6 @@ s2 = values(EmojiSymbols.emoji_symbols)
 @test sprint(show, MIME"text/plain"(), "🤔") == "\\:thinking_face: \"🤔\""
 @test sprint(show, MIME"text/plain"(), '☔') == "\\:umbrella_with_rain_drops: '☔': Unicode U+2614 (category So: Symbol, other)"
 
+@test string('🤔') == string("🤔") == "🤔"
+
 end # module test_emojisymbols_emoji
