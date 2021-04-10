@@ -1,14 +1,21 @@
 # code from https://github.com/JuliaLang/julia/blob/master/stdlib/REPL/src/emoji_symbols.jl
 
-# last changes - b9924d1 on Jan 11, 2020
+# Latest commit e512953 on Nov 19, 2020
 # https://github.com/iamcal/emoji-data/blob/master/emoji_pretty.json
 
-import JSON
-emojis = JSON.parsefile(download("https://raw.githubusercontent.com/iamcal/emoji-data/master/emoji_pretty.json"))
+using JSON
+using Downloads
+
+
+url = "https://raw.githubusercontent.com/iamcal/emoji-data/master/emoji_pretty.json"
+emoji_data_path = normpath(@__DIR__, "emoji_pretty.json")
+!isfile(emoji_data_path) && Downloads.download(url, emoji_data_path)
+emojis = JSON.parsefile(emoji_data_path)
 
 using REPL
 repl_emoji_symbols = REPL.REPLCompletions.emoji_symbols
 repl_latex_symbols = REPL.REPLCompletions.latex_symbols
+
 
 result = Dict{String, String}()
 symbol_table = Dict{Char, String}()
@@ -39,8 +46,11 @@ for emj in emojis
     symbol_table[c] = name
 end
 
+
+const generated_text = string("# generated")
+
 open(normpath(@__DIR__, "emoji_name_table.jl"), "w") do fh
-    println(fh, "# generated")
+    println(fh, generated_text)
     println(fh, "const emoji_name_table = Dict{Char, String}(")
     for (c, name) in symbol_table
         println(fh, "    ", repr(c), " => ", repr(name), ",")
@@ -49,7 +59,7 @@ open(normpath(@__DIR__, "emoji_name_table.jl"), "w") do fh
 end
 
 open(normpath(@__DIR__, "latex_name_table.jl"), "w") do fh
-    println(fh, "# generated")
+    println(fh, generated_text)
     println(fh, "const latex_name_table = Dict{Union{Char,String}, String}(")
     for (name, latex) in repl_latex_symbols
         if (isone ∘ length)(latex)
@@ -63,7 +73,7 @@ end
 
 skeys = sort(collect(keys(result)))
 open(normpath(@__DIR__, "emoji_symbols.jl"), "w") do fh
-    println(fh, "# generated")
+    println(fh, generated_text)
     println(fh, "const emoji_symbols = Dict{String,String}(")
     for key in skeys
         println(fh, "    \"", escape_string(key), "\" => \"", escape_string(result[key]), "\",")
@@ -102,6 +112,6 @@ function gen_doc(docfile, title, dict)
     end
 end
 
-gen_doc("../docs/src/additional_symbols.md",    "### additional Emoji symbols", result)
+# gen_doc("../docs/src/additional_symbols.md",    "### additional Emoji symbols", result)
 gen_doc("../docs/src/emoji_symbols_in_repl.md", "### Emoji symbols in REPL",    repl_emoji_symbols)
 gen_doc("../docs/src/latex_symbols_in_repl.md", "### LaTeX symbols in REPL",    repl_latex_symbols)

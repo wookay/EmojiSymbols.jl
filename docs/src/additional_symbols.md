@@ -1,12 +1,15 @@
 ### additional Emoji symbols
+* Julia VERSION < v"1.7.0-DEV.849"
 | short name | unicode |
 |------------|---------|
 | `\:abacus:` | 🧮 |
+| `\:accordion:` | 🪗 |
 | `\:adhesive_bandage:` | 🩹 |
 | `\:adult:` | 🧑 |
 | `\:airplane_arriving:` | 🛬 |
 | `\:airplane_departure:` | 🛫 |
 | `\:amphora:` | 🏺 |
+| `\:anatomical_heart:` | 🫀 |
 | `\:auto_rickshaw:` | 🛺 |
 | `\:avocado:` | 🥑 |
 | `\:axe:` | 🪓 |
@@ -20,10 +23,16 @@
 | `\:basket:` | 🧺 |
 | `\:bat:` | 🦇 |
 | `\:bearded_person:` | 🧔 |
+| `\:beaver:` | 🦫 |
+| `\:beetle:` | 🪲 |
+| `\:bell_pepper:` | 🫑 |
 | `\:beverage_box:` | 🧃 |
 | `\:billed_cap:` | 🧢 |
+| `\:bison:` | 🦬 |
 | `\:black_heart:` | 🖤 |
+| `\:blueberries:` | 🫐 |
 | `\:bone:` | 🦴 |
+| `\:boomerang:` | 🪃 |
 | `\:bow_and_arrow:` | 🏹 |
 | `\:bowl_with_spoon:` | 🥣 |
 | `\:boxing_glove:` | 🥊 |
@@ -34,6 +43,8 @@
 | `\:broccoli:` | 🥦 |
 | `\:broom:` | 🧹 |
 | `\:brown_heart:` | 🤎 |
+| `\:bubble_tea:` | 🧋 |
+| `\:bucket:` | 🪣 |
 | `\:burrito:` | 🌯 |
 | `\:butter:` | 🧈 |
 | `\:butterfly:` | 🦋 |
@@ -41,6 +52,7 @@
 | `\:camera_with_flash:` | 📸 |
 | `\:canned_food:` | 🥫 |
 | `\:canoe:` | 🛶 |
+| `\:carpentry_saw:` | 🪚 |
 | `\:carrot:` | 🥕 |
 | `\:chair:` | 🪑 |
 | `\:champagne:` | 🍾 |
@@ -50,7 +62,9 @@
 | `\:clinking_glasses:` | 🥂 |
 | `\:clown_face:` | 🤡 |
 | `\:coat:` | 🧥 |
+| `\:cockroach:` | 🪳 |
 | `\:coconut:` | 🥥 |
+| `\:coin:` | 🪙 |
 | `\:cold_face:` | 🥶 |
 | `\:compass:` | 🧭 |
 | `\:crab:` | 🦀 |
@@ -65,9 +79,11 @@
 | `\:cut_of_meat:` | 🥩 |
 | `\:deaf_person:` | 🧏 |
 | `\:deer:` | 🦌 |
+| `\:disguised_face:` | 🥸 |
 | `\:diving_mask:` | 🤿 |
 | `\:diya_lamp:` | 🪔 |
 | `\:dna:` | 🧬 |
+| `\:dodo:` | 🦤 |
 | `\:drooling_face:` | 🤤 |
 | `\:drop_of_blood:` | 🩸 |
 | `\:drum_with_drumsticks:` | 🥁 |
@@ -76,6 +92,7 @@
 | `\:eagle:` | 🦅 |
 | `\:ear_with_hearing_aid:` | 🦻 |
 | `\:egg:` | 🥚 |
+| `\:elevator:` | 🛗 |
 | `\:elf:` | 🧝 |
 | `\:exploding_head:` | 🤯 |
 | `\:face_palm:` | 🤦 |
@@ -90,14 +107,18 @@
 | `\:face_with_thermometer:` | 🤒 |
 | `\:fairy:` | 🧚 |
 | `\:falafel:` | 🧆 |
+| `\:feather:` | 🪶 |
 | `\:fencer:` | 🤺 |
 | `\:field_hockey_stick_and_ball:` | 🏑 |
 | `\:fire_extinguisher:` | 🧯 |
 | `\:firecracker:` | 🧨 |
 | `\:first_place_medal:` | 🥇 |
 | `\:flamingo:` | 🦩 |
+| `\:flatbread:` | 🫓 |
+| `\:fly:` | 🪰 |
 | `\:flying_disc:` | 🥏 |
 | `\:flying_saucer:` | 🛸 |
+| `\:fondue:` | 🫕 |
 | `\:foot:` | 🦶 |
 | `\:fortune_cookie:` | 🥠 |
 | `\:fox_face:` | 🦊 |
@@ -114,13 +135,16 @@
 | `\:guide_dog:` | 🦮 |
 | `\:handball:` | 🤾 |
 | `\:handshake:` | 🤝 |
+| `\:headstone:` | 🪦 |
 | `\:hedgehog:` | 🦔 |
 | `\:hiking_boot:` | 🥾 |
 | `\:hindu_temple:` | 🛕 |
 | `\:hippopotamus:` | 🦛 |
+| `\:hook:` | 🪝 |
 | `\:hot_face:` | 🥵 |
 | `\:hotdog:` | 🌭 |
 | `\:hugging_face:` | 🤗 |
+| `\:hut:` | 🛖 |
 | `\:i_love_you_hand_sign:` | 🤟 |
 | `\:ice_cube:` | 🧊 |
 | `\:ice_hockey_stick_and_puck:` | 🏒 |
@@ -131,8 +155,11 @@
 | `\:kite:` | 🪁 |
 | `\:kiwifruit:` | 🥝 |
 | `\:kneeling_person:` | 🧎 |
+| `\:knot:` | 🪢 |
 | `\:lab_coat:` | 🥼 |
 | `\:lacrosse:` | 🥍 |
+| `\:ladder:` | 🪜 |
+| `\:ladybug:` | 🐞 |
 | `\:large_blue_square:` | 🟦 |
 | `\:large_brown_circle:` | 🟤 |
 | `\:large_brown_square:` | 🟫 |
@@ -152,13 +179,17 @@
 | `\:lizard:` | 🦎 |
 | `\:llama:` | 🦙 |
 | `\:lobster:` | 🦞 |
+| `\:long_drum:` | 🪘 |
 | `\:lotion_bottle:` | 🧴 |
 | `\:luggage:` | 🧳 |
+| `\:lungs:` | 🫁 |
 | `\:lying_face:` | 🤥 |
 | `\:mage:` | 🧙 |
+| `\:magic_wand:` | 🪄 |
 | `\:magnet:` | 🧲 |
+| `\:mammoth:` | 🦣 |
+| `\:man_and_woman_holding_hands:` | 👫 |
 | `\:man_dancing:` | 🕺 |
-| `\:man_in_tuxedo:` | 🤵 |
 | `\:mango:` | 🥭 |
 | `\:manual_wheelchair:` | 🦽 |
 | `\:martial_arts_uniform:` | 🥋 |
@@ -169,18 +200,24 @@
 | `\:merperson:` | 🧜 |
 | `\:microbe:` | 🦠 |
 | `\:middle_finger:` | 🖕 |
+| `\:military_helmet:` | 🪖 |
+| `\:mirror:` | 🪞 |
 | `\:money_mouth_face:` | 🤑 |
 | `\:moon_cake:` | 🥮 |
 | `\:mosque:` | 🕌 |
 | `\:mosquito:` | 🦟 |
 | `\:motor_scooter:` | 🛵 |
 | `\:motorized_wheelchair:` | 🦼 |
+| `\:mouse_trap:` | 🪤 |
 | `\:mrs_claus:` | 🤶 |
 | `\:nauseated_face:` | 🤢 |
 | `\:nazar_amulet:` | 🧿 |
 | `\:nerd_face:` | 🤓 |
+| `\:nesting_dolls:` | 🪆 |
+| `\:ninja:` | 🥷 |
 | `\:octagonal_sign:` | 🛑 |
 | `\:older_adult:` | 🧓 |
+| `\:olive:` | 🫒 |
 | `\:one-piece_swimsuit:` | 🩱 |
 | `\:onion:` | 🧅 |
 | `\:orange_heart:` | 🧡 |
@@ -195,18 +232,26 @@
 | `\:partying_face:` | 🥳 |
 | `\:peacock:` | 🦚 |
 | `\:peanuts:` | 🥜 |
+| `\:people_hugging:` | 🫂 |
 | `\:person_climbing:` | 🧗 |
 | `\:person_doing_cartwheel:` | 🤸 |
 | `\:person_in_lotus_position:` | 🧘 |
 | `\:person_in_steamy_room:` | 🧖 |
+| `\:person_in_tuxedo:` | 🤵 |
 | `\:person_with_headscarf:` | 🧕 |
 | `\:petri_dish:` | 🧫 |
+| `\:pickup_truck:` | 🛻 |
 | `\:pie:` | 🥧 |
+| `\:pinata:` | 🪅 |
+| `\:pinched_fingers:` | 🤌 |
 | `\:pinching_hand:` | 🤏 |
+| `\:placard:` | 🪧 |
 | `\:place_of_worship:` | 🛐 |
 | `\:pleading_face:` | 🥺 |
+| `\:plunger:` | 🪠 |
 | `\:popcorn:` | 🍿 |
 | `\:potato:` | 🥔 |
+| `\:potted_plant:` | 🪴 |
 | `\:prayer_beads:` | 📿 |
 | `\:pregnant_woman:` | 🤰 |
 | `\:pretzel:` | 🥨 |
@@ -221,7 +266,9 @@
 | `\:right-facing_fist:` | 🤜 |
 | `\:ringed_planet:` | 🪐 |
 | `\:robot_face:` | 🤖 |
+| `\:rock:` | 🪨 |
 | `\:roll_of_paper:` | 🧻 |
+| `\:roller_skate:` | 🛼 |
 | `\:rolling_on_the_floor_laughing:` | 🤣 |
 | `\:safety_pin:` | 🧷 |
 | `\:safety_vest:` | 🦺 |
@@ -233,8 +280,11 @@
 | `\:scarf:` | 🧣 |
 | `\:scooter:` | 🛴 |
 | `\:scorpion:` | 🦂 |
+| `\:screwdriver:` | 🪛 |
+| `\:seal:` | 🦭 |
 | `\:second_place_medal:` | 🥈 |
 | `\:selfie:` | 🤳 |
+| `\:sewing_needle:` | 🪡 |
 | `\:shallow_pan_of_food:` | 🥘 |
 | `\:shark:` | 🦈 |
 | `\:shopping_trolley:` | 🛒 |
@@ -250,6 +300,7 @@
 | `\:slightly_smiling_face:` | 🙂 |
 | `\:sloth:` | 🦥 |
 | `\:smiling_face_with_3_hearts:` | 🥰 |
+| `\:smiling_face_with_tear:` | 🥲 |
 | `\:sneezing_face:` | 🤧 |
 | `\:snowman_without_snow:` | ⛄ |
 | `\:soap:` | 🧼 |
@@ -272,14 +323,18 @@
 | `\:table_tennis_paddle_and_ball:` | 🏓 |
 | `\:taco:` | 🌮 |
 | `\:takeout_box:` | 🥡 |
+| `\:tamale:` | 🫔 |
+| `\:teapot:` | 🫖 |
 | `\:teddy_bear:` | 🧸 |
 | `\:test_tube:` | 🧪 |
 | `\:the_horns:` | 🤘 |
 | `\:thinking_face:` | 🤔 |
 | `\:third_place_medal:` | 🥉 |
+| `\:thong_sandal:` | 🩴 |
 | `\:thread:` | 🧵 |
 | `\:toolbox:` | 🧰 |
 | `\:tooth:` | 🦷 |
+| `\:toothbrush:` | 🪥 |
 | `\:tumbler_glass:` | 🥃 |
 | `\:turkey:` | 🦃 |
 | `\:umbrella_with_rain_drops:` | ☔ |
@@ -292,8 +347,11 @@
 | `\:waving_black_flag:` | 🏴 |
 | `\:white_heart:` | 🤍 |
 | `\:wilted_flower:` | 🥀 |
+| `\:window:` | 🪟 |
 | `\:womans_flat_shoe:` | 🥿 |
+| `\:wood:` | 🪵 |
 | `\:woozy_face:` | 🥴 |
+| `\:worm:` | 🪱 |
 | `\:wrestlers:` | 🤼 |
 | `\:yarn:` | 🧶 |
 | `\:yawning_face:` | 🥱 |
@@ -322,6 +380,8 @@
 <span title="&#92;:badminton_racquet_and_shuttlecock:">🏸</span>
 <span title="&#92;:bow_and_arrow:">🏹</span>
 <span title="&#92;:amphora:">🏺</span>
+<span title="&#92;:ladybug:">🐞</span>
+<span title="&#92;:man_and_woman_holding_hands:">👫</span>
 <span title="&#92;:satellite_antenna:">📡</span>
 <span title="&#92;:camera_with_flash:">📸</span>
 <span title="&#92;:prayer_beads:">📿</span>
@@ -342,6 +402,8 @@
 <span title="&#92;:octagonal_sign:">🛑</span>
 <span title="&#92;:shopping_trolley:">🛒</span>
 <span title="&#92;:hindu_temple:">🛕</span>
+<span title="&#92;:hut:">🛖</span>
+<span title="&#92;:elevator:">🛗</span>
 <span title="&#92;:airplane_departure:">🛫</span>
 <span title="&#92;:airplane_arriving:">🛬</span>
 <span title="&#92;:scooter:">🛴</span>
@@ -351,6 +413,8 @@
 <span title="&#92;:flying_saucer:">🛸</span>
 <span title="&#92;:skateboard:">🛹</span>
 <span title="&#92;:auto_rickshaw:">🛺</span>
+<span title="&#92;:pickup_truck:">🛻</span>
+<span title="&#92;:roller_skate:">🛼</span>
 <span title="&#92;:large_orange_circle:">🟠</span>
 <span title="&#92;:large_yellow_circle:">🟡</span>
 <span title="&#92;:large_green_circle:">🟢</span>
@@ -363,6 +427,7 @@
 <span title="&#92;:large_green_square:">🟩</span>
 <span title="&#92;:large_purple_square:">🟪</span>
 <span title="&#92;:large_brown_square:">🟫</span>
+<span title="&#92;:pinched_fingers:">🤌</span>
 <span title="&#92;:white_heart:">🤍</span>
 <span title="&#92;:brown_heart:">🤎</span>
 <span title="&#92;:pinching_hand:">🤏</span>
@@ -403,7 +468,7 @@
 <span title="&#92;:palms_up_together:">🤲</span>
 <span title="&#92;:selfie:">🤳</span>
 <span title="&#92;:prince:">🤴</span>
-<span title="&#92;:man_in_tuxedo:">🤵</span>
+<span title="&#92;:person_in_tuxedo:">🤵</span>
 <span title="&#92;:mrs_claus:">🤶</span>
 <span title="&#92;:shrug:">🤷</span>
 <span title="&#92;:person_doing_cartwheel:">🤸</span>
@@ -462,10 +527,13 @@
 <span title="&#92;:bagel:">🥯</span>
 <span title="&#92;:smiling_face_with_3_hearts:">🥰</span>
 <span title="&#92;:yawning_face:">🥱</span>
+<span title="&#92;:smiling_face_with_tear:">🥲</span>
 <span title="&#92;:partying_face:">🥳</span>
 <span title="&#92;:woozy_face:">🥴</span>
 <span title="&#92;:hot_face:">🥵</span>
 <span title="&#92;:cold_face:">🥶</span>
+<span title="&#92;:ninja:">🥷</span>
+<span title="&#92;:disguised_face:">🥸</span>
 <span title="&#92;:pleading_face:">🥺</span>
 <span title="&#92;:sari:">🥻</span>
 <span title="&#92;:lab_coat:">🥼</span>
@@ -507,12 +575,17 @@
 <span title="&#92;:microbe:">🦠</span>
 <span title="&#92;:badger:">🦡</span>
 <span title="&#92;:swan:">🦢</span>
+<span title="&#92;:mammoth:">🦣</span>
+<span title="&#92;:dodo:">🦤</span>
 <span title="&#92;:sloth:">🦥</span>
 <span title="&#92;:otter:">🦦</span>
 <span title="&#92;:orangutan:">🦧</span>
 <span title="&#92;:skunk:">🦨</span>
 <span title="&#92;:flamingo:">🦩</span>
 <span title="&#92;:oyster:">🦪</span>
+<span title="&#92;:beaver:">🦫</span>
+<span title="&#92;:bison:">🦬</span>
+<span title="&#92;:seal:">🦭</span>
 <span title="&#92;:guide_dog:">🦮</span>
 <span title="&#92;:probing_cane:">🦯</span>
 <span title="&#92;:bone:">🦴</span>
@@ -538,6 +611,7 @@
 <span title="&#92;:butter:">🧈</span>
 <span title="&#92;:mate_drink:">🧉</span>
 <span title="&#92;:ice_cube:">🧊</span>
+<span title="&#92;:bubble_tea:">🧋</span>
 <span title="&#92;:standing_person:">🧍</span>
 <span title="&#92;:kneeling_person:">🧎</span>
 <span title="&#92;:deaf_person:">🧏</span>
@@ -593,16 +667,57 @@
 <span title="&#92;:one-piece_swimsuit:">🩱</span>
 <span title="&#92;:briefs:">🩲</span>
 <span title="&#92;:shorts:">🩳</span>
+<span title="&#92;:thong_sandal:">🩴</span>
 <span title="&#92;:drop_of_blood:">🩸</span>
 <span title="&#92;:adhesive_bandage:">🩹</span>
 <span title="&#92;:stethoscope:">🩺</span>
 <span title="&#92;:yo-yo:">🪀</span>
 <span title="&#92;:kite:">🪁</span>
 <span title="&#92;:parachute:">🪂</span>
+<span title="&#92;:boomerang:">🪃</span>
+<span title="&#92;:magic_wand:">🪄</span>
+<span title="&#92;:pinata:">🪅</span>
+<span title="&#92;:nesting_dolls:">🪆</span>
 <span title="&#92;:ringed_planet:">🪐</span>
 <span title="&#92;:chair:">🪑</span>
 <span title="&#92;:razor:">🪒</span>
 <span title="&#92;:axe:">🪓</span>
 <span title="&#92;:diya_lamp:">🪔</span>
 <span title="&#92;:banjo:">🪕</span>
+<span title="&#92;:military_helmet:">🪖</span>
+<span title="&#92;:accordion:">🪗</span>
+<span title="&#92;:long_drum:">🪘</span>
+<span title="&#92;:coin:">🪙</span>
+<span title="&#92;:carpentry_saw:">🪚</span>
+<span title="&#92;:screwdriver:">🪛</span>
+<span title="&#92;:ladder:">🪜</span>
+<span title="&#92;:hook:">🪝</span>
+<span title="&#92;:mirror:">🪞</span>
+<span title="&#92;:window:">🪟</span>
+<span title="&#92;:plunger:">🪠</span>
+<span title="&#92;:sewing_needle:">🪡</span>
+<span title="&#92;:knot:">🪢</span>
+<span title="&#92;:bucket:">🪣</span>
+<span title="&#92;:mouse_trap:">🪤</span>
+<span title="&#92;:toothbrush:">🪥</span>
+<span title="&#92;:headstone:">🪦</span>
+<span title="&#92;:placard:">🪧</span>
+<span title="&#92;:rock:">🪨</span>
+<span title="&#92;:fly:">🪰</span>
+<span title="&#92;:worm:">🪱</span>
+<span title="&#92;:beetle:">🪲</span>
+<span title="&#92;:cockroach:">🪳</span>
+<span title="&#92;:potted_plant:">🪴</span>
+<span title="&#92;:wood:">🪵</span>
+<span title="&#92;:feather:">🪶</span>
+<span title="&#92;:anatomical_heart:">🫀</span>
+<span title="&#92;:lungs:">🫁</span>
+<span title="&#92;:people_hugging:">🫂</span>
+<span title="&#92;:blueberries:">🫐</span>
+<span title="&#92;:bell_pepper:">🫑</span>
+<span title="&#92;:olive:">🫒</span>
+<span title="&#92;:flatbread:">🫓</span>
+<span title="&#92;:tamale:">🫔</span>
+<span title="&#92;:fondue:">🫕</span>
+<span title="&#92;:teapot:">🫖</span>
 ```

@@ -7,9 +7,6 @@ additional Emoji symbols for Julia REPL 🤔
 ```julia
 julia> using EmojiSymbols
 
-julia> \:thinking_face:<TAB>
-julia> 🤔
-
 julia> '🤔'
 \:thinking_face: '🤔': Unicode U+1F914 (category So: Symbol, other)
 
@@ -20,6 +17,7 @@ julia> 'β'
 
 ### additional Emoji symbols
 
+* Julia VERSION < v"1.7.0-DEV.849"
 ```@raw html
 <span title="&#92;:umbrella_with_rain_drops:">☔</span>
 <span title="&#92;:snowman_without_snow:">⛄</span>

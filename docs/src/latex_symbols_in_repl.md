@@ -28,6 +28,7 @@
 | `\Angle` | ⦜ |
 | `\Angstrom` | Å |
 | `\Beta` | Β |
+| `\Bot` | ⫫ |
 | `\Bumpeq` | ≎ |
 | `\Cap` | ⋒ |
 | `\Chi` | Χ |
@@ -62,7 +63,6 @@
 | `\H` | ̋ |
 | `\Im` | ℑ |
 | `\Iota` | Ι |
-| `\Join` | ⨝ |
 | `\Kappa` | Κ |
 | `\Koppa` | Ϟ |
 | `\L` | Ł |
@@ -149,6 +149,7 @@
 | `\Tau` | Τ |
 | `\Theta` | Θ |
 | `\Times` | ⨯ |
+| `\Top` | ⫪ |
 | `\UUparrow` | ⟰ |
 | `\UpArrowBar` | ⤒ |
 | `\UpEquilibrium` | ⥮ |
@@ -165,6 +166,7 @@
 | `\Yup` | ⅄ |
 | `\Zbar` | Ƶ |
 | `\Zeta` | Ζ |
+| `\^!` | ꜝ |
 | `\^(` | ⁽ |
 | `\^)` | ⁾ |
 | `\^+` | ⁺ |
@@ -194,7 +196,6 @@
 | `\^N` | ᴺ |
 | `\^O` | ᴼ |
 | `\^P` | ᴾ |
-| `\^Phi` | ᶲ |
 | `\^R` | ᴿ |
 | `\^T` | ᵀ |
 | `\^U` | ᵁ |
@@ -208,6 +209,7 @@
 | `\^chi` | ᵡ |
 | `\^d` | ᵈ |
 | `\^delta` | ᵟ |
+| `\^downarrow` | ꜜ |
 | `\^e` | ᵉ |
 | `\^epsilon` | ᵋ |
 | `\^f` | ᶠ |
@@ -219,6 +221,7 @@
 | `\^j` | ʲ |
 | `\^k` | ᵏ |
 | `\^l` | ˡ |
+| `\^ltphi` | ᶲ |
 | `\^m` | ᵐ |
 | `\^n` | ⁿ |
 | `\^o` | ᵒ |
@@ -229,6 +232,7 @@
 | `\^t` | ᵗ |
 | `\^theta` | ᶿ |
 | `\^u` | ᵘ |
+| `\^uparrow` | ꜛ |
 | `\^v` | ᵛ |
 | `\^w` | ʷ |
 | `\^x` | ˣ |
@@ -457,7 +461,7 @@
 | `\bfdigamma` | 𝟋 |
 | `\bfe` | 𝐞 |
 | `\bfeight` | 𝟖 |
-| `\bfepsilon` | 𝛆 |
+| `\bfepsilon` | 𝛜 |
 | `\bfeta` | 𝛈 |
 | `\bff` | 𝐟 |
 | `\bffive` | 𝟓 |
@@ -555,7 +559,7 @@
 | `\bfupsilon` | 𝛖 |
 | `\bfv` | 𝐯 |
 | `\bfvarTheta` | 𝚹 |
-| `\bfvarepsilon` | 𝛜 |
+| `\bfvarepsilon` | 𝛆 |
 | `\bfvarkappa` | 𝛞 |
 | `\bfvarphi` | 𝛗 |
 | `\bfvarpi` | 𝛡 |
@@ -628,7 +632,7 @@
 | `\bid` | 𝒅 |
 | `\bidelta` | 𝜹 |
 | `\bie` | 𝒆 |
-| `\biepsilon` | 𝜺 |
+| `\biepsilon` | 𝝐 |
 | `\bieta` | 𝜼 |
 | `\bif` | 𝒇 |
 | `\big` | 𝒈 |
@@ -674,7 +678,7 @@
 | `\biomicron` | 𝝄 |
 | `\bip` | 𝒑 |
 | `\bipartial` | 𝝏 |
-| `\biphi` | 𝝋 |
+| `\biphi` | 𝝓 |
 | `\bipi` | 𝝅 |
 | `\bipsi` | 𝝍 |
 | `\biq` | 𝒒 |
@@ -740,7 +744,7 @@
 | `\bisansd` | 𝙙 |
 | `\bisansdelta` | 𝞭 |
 | `\bisanse` | 𝙚 |
-| `\bisansepsilon` | 𝞮 |
+| `\bisansepsilon` | 𝟄 |
 | `\bisanseta` | 𝞰 |
 | `\bisansf` | 𝙛 |
 | `\bisansg` | 𝙜 |
@@ -763,7 +767,7 @@
 | `\bisansomicron` | 𝞸 |
 | `\bisansp` | 𝙥 |
 | `\bisanspartial` | 𝟃 |
-| `\bisansphi` | 𝞿 |
+| `\bisansphi` | 𝟇 |
 | `\bisanspi` | 𝞹 |
 | `\bisanspsi` | 𝟁 |
 | `\bisansq` | 𝙦 |
@@ -778,9 +782,9 @@
 | `\bisansupsilon` | 𝞾 |
 | `\bisansv` | 𝙫 |
 | `\bisansvarTheta` | 𝞡 |
-| `\bisansvarepsilon` | 𝟄 |
+| `\bisansvarepsilon` | 𝞮 |
 | `\bisansvarkappa` | 𝟆 |
-| `\bisansvarphi` | 𝟇 |
+| `\bisansvarphi` | 𝞿 |
 | `\bisansvarpi` | 𝟉 |
 | `\bisansvarrho` | 𝟈 |
 | `\bisansvarsigma` | 𝞻 |
@@ -799,9 +803,9 @@
 | `\biupsilon` | 𝝊 |
 | `\biv` | 𝒗 |
 | `\bivarTheta` | 𝜭 |
-| `\bivarepsilon` | 𝝐 |
+| `\bivarepsilon` | 𝜺 |
 | `\bivarkappa` | 𝝒 |
-| `\bivarphi` | 𝝓 |
+| `\bivarphi` | 𝝋 |
 | `\bivarpi` | 𝝕 |
 | `\bivarrho` | 𝝔 |
 | `\bivarsigma` | 𝝇 |
@@ -916,7 +920,7 @@
 | `\bsansdelta` | 𝝳 |
 | `\bsanse` | 𝗲 |
 | `\bsanseight` | 𝟴 |
-| `\bsansepsilon` | 𝝴 |
+| `\bsansepsilon` | 𝞊 |
 | `\bsanseta` | 𝝶 |
 | `\bsansf` | 𝗳 |
 | `\bsansfive` | 𝟱 |
@@ -943,7 +947,7 @@
 | `\bsansone` | 𝟭 |
 | `\bsansp` | 𝗽 |
 | `\bsanspartial` | 𝞉 |
-| `\bsansphi` | 𝞅 |
+| `\bsansphi` | 𝞍 |
 | `\bsanspi` | 𝝿 |
 | `\bsanspsi` | 𝞇 |
 | `\bsansq` | 𝗾 |
@@ -962,9 +966,9 @@
 | `\bsansupsilon` | 𝞄 |
 | `\bsansv` | 𝘃 |
 | `\bsansvarTheta` | 𝝧 |
-| `\bsansvarepsilon` | 𝞊 |
+| `\bsansvarepsilon` | 𝝴 |
 | `\bsansvarkappa` | 𝞌 |
-| `\bsansvarphi` | 𝞍 |
+| `\bsansvarphi` | 𝞅 |
 | `\bsansvarpi` | 𝞏 |
 | `\bsansvarrho` | 𝞎 |
 | `\bsansvarsigma` | 𝞁 |
@@ -1177,6 +1181,7 @@
 | `\downharpoonleft` | ⇃ |
 | `\downharpoonright` | ⇂ |
 | `\downharpoonsleftright` | ⥥ |
+| `\downvDash` | ⫪ |
 | `\downwhitearrow` | ⇩ |
 | `\downzigzagarrow` | ↯ |
 | `\draftingarrow` | ➛ |
@@ -1255,6 +1260,7 @@
 | `\frakF` | 𝔉 |
 | `\frakG` | 𝔊 |
 | `\frakH` | ℌ |
+| `\frakI` | ℑ |
 | `\frakJ` | 𝔍 |
 | `\frakK` | 𝔎 |
 | `\frakL` | 𝔏 |
@@ -1263,6 +1269,7 @@
 | `\frakO` | 𝔒 |
 | `\frakP` | 𝔓 |
 | `\frakQ` | 𝔔 |
+| `\frakR` | ℜ |
 | `\frakS` | 𝔖 |
 | `\frakT` | 𝔗 |
 | `\frakU` | 𝔘 |
@@ -1368,6 +1375,7 @@
 | `\implies` | ⟹ |
 | `\in` | ∈ |
 | `\increment` | ∆ |
+| `\indep` | ⫫ |
 | `\infty` | ∞ |
 | `\inglst` | ʖ |
 | `\int` | ∫ |
@@ -1503,11 +1511,12 @@
 | `\itd` | 𝑑 |
 | `\itdelta` | 𝛿 |
 | `\ite` | 𝑒 |
-| `\itepsilon` | 𝜀 |
+| `\itepsilon` | 𝜖 |
 | `\iteta` | 𝜂 |
 | `\itf` | 𝑓 |
 | `\itg` | 𝑔 |
 | `\itgamma` | 𝛾 |
+| `\ith` | ℎ |
 | `\iti` | 𝑖 |
 | `\itimath` | 𝚤 |
 | `\itiota` | 𝜄 |
@@ -1527,7 +1536,7 @@
 | `\itomicron` | 𝜊 |
 | `\itp` | 𝑝 |
 | `\itpartial` | 𝜕 |
-| `\itphi` | 𝜑 |
+| `\itphi` | 𝜙 |
 | `\itpi` | 𝜋 |
 | `\itpsi` | 𝜓 |
 | `\itq` | 𝑞 |
@@ -1542,9 +1551,9 @@
 | `\itupsilon` | 𝜐 |
 | `\itv` | 𝑣 |
 | `\itvarTheta` | 𝛳 |
-| `\itvarepsilon` | 𝜖 |
+| `\itvarepsilon` | 𝜀 |
 | `\itvarkappa` | 𝜘 |
-| `\itvarphi` | 𝜙 |
+| `\itvarphi` | 𝜑 |
 | `\itvarpi` | 𝜛 |
 | `\itvarrho` | 𝜚 |
 | `\itvarsigma` | 𝜍 |
@@ -1569,6 +1578,7 @@
 | `\lazysinv` | ∾ |
 | `\lceil` | ⌈ |
 | `\ldots` | … |
+| `\ldq` | “ |
 | `\le` | ≤ |
 | `\leftarrow` | ← |
 | `\leftarrowapprox` | ⭊ |
@@ -1743,6 +1753,7 @@
 | `\nVtwoheadrightarrow` | ⤁ |
 | `\nVtwoheadrightarrowtail` | ⤘ |
 | `\nabla` | ∇ |
+| `\nand` | ⊼ |
 | `\napprox` | ≉ |
 | `\nasymp` | ≭ |
 | `\natural` | ♮ |
@@ -1776,6 +1787,7 @@
 | `\nmid` | ∤ |
 | `\nni` | ∌ |
 | `\nolinebreak` | \u2060 |
+| `\nor` | ⊽ |
 | `\not` | ̸ |
 | `\notbackslash` | ⍀ |
 | `\notgreaterless` | ≹ |
@@ -1921,8 +1933,6 @@
 | `\quarternote` | ♩ |
 | `\questeq` | ≟ |
 | `\questiondown` | ¿ |
-| `\quotedblleft` | “ |
-| `\quotedblright` | ” |
 | `\rLarr` | ⥄ |
 | `\rais` | ˔ |
 | `\rangle` | ⟩ |
@@ -1931,6 +1941,7 @@
 | `\rceil` | ⌉ |
 | `\rdiagovfdiag` | ⤫ |
 | `\rdiagovsearrow` | ⤰ |
+| `\rdq` | ” |
 | `\reapos` | ‛ |
 | `\recorder` | ⌕ |
 | `\reglst` | ʕ |
@@ -2410,6 +2421,7 @@
 | `\upsilon` | υ |
 | `\upstigma` | ϛ |
 | `\upuparrows` | ⇈ |
+| `\upvDash` | ⫫ |
 | `\upvarbeta` | ϐ |
 | `\upwhitearrow` | ⇧ |
 | `\uranus` | ♅ |
@@ -2755,7 +2767,7 @@
 <span title="&#92;^c">ᶜ</span>
 <span title="&#92;^f">ᶠ</span>
 <span title="&#92;^iota">ᶥ</span>
-<span title="&#92;^Phi">ᶲ</span>
+<span title="&#92;^ltphi">ᶲ</span>
 <span title="&#92;^z">ᶻ</span>
 <span title="&#92;^theta">ᶿ</span>
 <span title="&#92;enspace"> </span>
@@ -2769,8 +2781,8 @@
 <span title="&#92;lq">‘</span>
 <span title="&#92;rq">’</span>
 <span title="&#92;reapos">‛</span>
-<span title="&#92;quotedblleft">“</span>
-<span title="&#92;quotedblright">”</span>
+<span title="&#92;ldq">“</span>
+<span title="&#92;rdq">”</span>
 <span title="&#92;dagger">†</span>
 <span title="&#92;ddagger">‡</span>
 <span title="&#92;bullet">•</span>
@@ -2860,10 +2872,12 @@
 <span title="&#92;scrH">ℋ</span>
 <span title="&#92;frakH">ℌ</span>
 <span title="&#92;bbH">ℍ</span>
+<span title="&#92;ith">ℎ</span>
 <span title="&#92;planck">ℎ</span>
 <span title="&#92;hslash">ℏ</span>
 <span title="&#92;scrI">ℐ</span>
 <span title="&#92;Im">ℑ</span>
+<span title="&#92;frakI">ℑ</span>
 <span title="&#92;scrL">ℒ</span>
 <span title="&#92;ell">ℓ</span>
 <span title="&#92;bbN">ℕ</span>
@@ -2873,6 +2887,7 @@
 <span title="&#92;bbQ">ℚ</span>
 <span title="&#92;scrR">ℛ</span>
 <span title="&#92;Re">ℜ</span>
+<span title="&#92;frakR">ℜ</span>
 <span title="&#92;bbR">ℝ</span>
 <span title="&#92;xrat">℞</span>
 <span title="&#92;trademark">™</span>
@@ -3235,7 +3250,9 @@
 <span title="&#92;veebar">⊻</span>
 <span title="&#92;xor">⊻</span>
 <span title="&#92;barwedge">⊼</span>
+<span title="&#92;nand">⊼</span>
 <span title="&#92;barvee">⊽</span>
+<span title="&#92;nor">⊽</span>
 <span title="&#92;rightanglearc">⊾</span>
 <span title="&#92;varlrtriangle">⊿</span>
 <span title="&#92;bigwedge">⋀</span>
@@ -3736,7 +3753,6 @@
 <span title="&#92;intcup">⨚</span>
 <span title="&#92;upint">⨛</span>
 <span title="&#92;lowint">⨜</span>
-<span title="&#92;Join">⨝</span>
 <span title="&#92;join">⨝</span>
 <span title="&#92;bbsemi">⨟</span>
 <span title="&#92;ringplus">⨢</span>
@@ -3926,6 +3942,11 @@
 <span title="&#92;forksnot">⫝</span>
 <span title="&#92;dashV">⫣</span>
 <span title="&#92;Dashv">⫤</span>
+<span title="&#92;Top">⫪</span>
+<span title="&#92;downvDash">⫪</span>
+<span title="&#92;upvDash">⫫</span>
+<span title="&#92;Bot">⫫</span>
+<span title="&#92;indep">⫫</span>
 <span title="&#92;interleave">⫴</span>
 <span title="&#92;tdcol">⫶</span>
 <span title="&#92;lllnest">⫷</span>
@@ -3999,6 +4020,9 @@
 <span title="&#92;_j">ⱼ</span>
 <span title="&#92;^V">ⱽ</span>
 <span title="&#92;postalmark">〒</span>
+<span title="&#92;^uparrow">ꜛ</span>
+<span title="&#92;^downarrow">ꜜ</span>
+<span title="&#92;^!">ꜝ</span>
 <span title="&#92;bfA">𝐀</span>
 <span title="&#92;bfB">𝐁</span>
 <span title="&#92;bfC">𝐂</span>
@@ -4683,7 +4707,7 @@
 <span title="&#92;bfbeta">𝛃</span>
 <span title="&#92;bfgamma">𝛄</span>
 <span title="&#92;bfdelta">𝛅</span>
-<span title="&#92;bfepsilon">𝛆</span>
+<span title="&#92;bfvarepsilon">𝛆</span>
 <span title="&#92;bfzeta">𝛇</span>
 <span title="&#92;bfeta">𝛈</span>
 <span title="&#92;bftheta">𝛉</span>
@@ -4705,7 +4729,7 @@
 <span title="&#92;bfpsi">𝛙</span>
 <span title="&#92;bfomega">𝛚</span>
 <span title="&#92;bfpartial">𝛛</span>
-<span title="&#92;bfvarepsilon">𝛜</span>
+<span title="&#92;bfepsilon">𝛜</span>
 <span title="&#92;bfvartheta">𝛝</span>
 <span title="&#92;bfvarkappa">𝛞</span>
 <span title="&#92;bfphi">𝛟</span>
@@ -4741,7 +4765,7 @@
 <span title="&#92;itbeta">𝛽</span>
 <span title="&#92;itgamma">𝛾</span>
 <span title="&#92;itdelta">𝛿</span>
-<span title="&#92;itepsilon">𝜀</span>
+<span title="&#92;itvarepsilon">𝜀</span>
 <span title="&#92;itzeta">𝜁</span>
 <span title="&#92;iteta">𝜂</span>
 <span title="&#92;ittheta">𝜃</span>
@@ -4758,15 +4782,15 @@
 <span title="&#92;itsigma">𝜎</span>
 <span title="&#92;ittau">𝜏</span>
 <span title="&#92;itupsilon">𝜐</span>
-<span title="&#92;itphi">𝜑</span>
+<span title="&#92;itvarphi">𝜑</span>
 <span title="&#92;itchi">𝜒</span>
 <span title="&#92;itpsi">𝜓</span>
 <span title="&#92;itomega">𝜔</span>
 <span title="&#92;itpartial">𝜕</span>
-<span title="&#92;itvarepsilon">𝜖</span>
+<span title="&#92;itepsilon">𝜖</span>
 <span title="&#92;itvartheta">𝜗</span>
 <span title="&#92;itvarkappa">𝜘</span>
-<span title="&#92;itvarphi">𝜙</span>
+<span title="&#92;itphi">𝜙</span>
 <span title="&#92;itvarrho">𝜚</span>
 <span title="&#92;itvarpi">𝜛</span>
 <span title="&#92;biAlpha">𝜜</span>
@@ -4799,7 +4823,7 @@
 <span title="&#92;bibeta">𝜷</span>
 <span title="&#92;bigamma">𝜸</span>
 <span title="&#92;bidelta">𝜹</span>
-<span title="&#92;biepsilon">𝜺</span>
+<span title="&#92;bivarepsilon">𝜺</span>
 <span title="&#92;bizeta">𝜻</span>
 <span title="&#92;bieta">𝜼</span>
 <span title="&#92;bitheta">𝜽</span>
@@ -4816,15 +4840,15 @@
 <span title="&#92;bisigma">𝝈</span>
 <span title="&#92;bitau">𝝉</span>
 <span title="&#92;biupsilon">𝝊</span>
-<span title="&#92;biphi">𝝋</span>
+<span title="&#92;bivarphi">𝝋</span>
 <span title="&#92;bichi">𝝌</span>
 <span title="&#92;bipsi">𝝍</span>
 <span title="&#92;biomega">𝝎</span>
 <span title="&#92;bipartial">𝝏</span>
-<span title="&#92;bivarepsilon">𝝐</span>
+<span title="&#92;biepsilon">𝝐</span>
 <span title="&#92;bivartheta">𝝑</span>
 <span title="&#92;bivarkappa">𝝒</span>
-<span title="&#92;bivarphi">𝝓</span>
+<span title="&#92;biphi">𝝓</span>
 <span title="&#92;bivarrho">𝝔</span>
 <span title="&#92;bivarpi">𝝕</span>
 <span title="&#92;bsansAlpha">𝝖</span>
@@ -4857,7 +4881,7 @@
 <span title="&#92;bsansbeta">𝝱</span>
 <span title="&#92;bsansgamma">𝝲</span>
 <span title="&#92;bsansdelta">𝝳</span>
-<span title="&#92;bsansepsilon">𝝴</span>
+<span title="&#92;bsansvarepsilon">𝝴</span>
 <span title="&#92;bsanszeta">𝝵</span>
 <span title="&#92;bsanseta">𝝶</span>
 <span title="&#92;bsanstheta">𝝷</span>
@@ -4874,15 +4898,15 @@
 <span title="&#92;bsanssigma">𝞂</span>
 <span title="&#92;bsanstau">𝞃</span>
 <span title="&#92;bsansupsilon">𝞄</span>
-<span title="&#92;bsansphi">𝞅</span>
+<span title="&#92;bsansvarphi">𝞅</span>
 <span title="&#92;bsanschi">𝞆</span>
 <span title="&#92;bsanspsi">𝞇</span>
 <span title="&#92;bsansomega">𝞈</span>
 <span title="&#92;bsanspartial">𝞉</span>
-<span title="&#92;bsansvarepsilon">𝞊</span>
+<span title="&#92;bsansepsilon">𝞊</span>
 <span title="&#92;bsansvartheta">𝞋</span>
 <span title="&#92;bsansvarkappa">𝞌</span>
-<span title="&#92;bsansvarphi">𝞍</span>
+<span title="&#92;bsansphi">𝞍</span>
 <span title="&#92;bsansvarrho">𝞎</span>
 <span title="&#92;bsansvarpi">𝞏</span>
 <span title="&#92;bisansAlpha">𝞐</span>
@@ -4915,7 +4939,7 @@
 <span title="&#92;bisansbeta">𝞫</span>
 <span title="&#92;bisansgamma">𝞬</span>
 <span title="&#92;bisansdelta">𝞭</span>
-<span title="&#92;bisansepsilon">𝞮</span>
+<span title="&#92;bisansvarepsilon">𝞮</span>
 <span title="&#92;bisanszeta">𝞯</span>
 <span title="&#92;bisanseta">𝞰</span>
 <span title="&#92;bisanstheta">𝞱</span>
@@ -4932,15 +4956,15 @@
 <span title="&#92;bisanssigma">𝞼</span>
 <span title="&#92;bisanstau">𝞽</span>
 <span title="&#92;bisansupsilon">𝞾</span>
-<span title="&#92;bisansphi">𝞿</span>
+<span title="&#92;bisansvarphi">𝞿</span>
 <span title="&#92;bisanschi">𝟀</span>
 <span title="&#92;bisanspsi">𝟁</span>
 <span title="&#92;bisansomega">𝟂</span>
 <span title="&#92;bisanspartial">𝟃</span>
-<span title="&#92;bisansvarepsilon">𝟄</span>
+<span title="&#92;bisansepsilon">𝟄</span>
 <span title="&#92;bisansvartheta">𝟅</span>
 <span title="&#92;bisansvarkappa">𝟆</span>
-<span title="&#92;bisansvarphi">𝟇</span>
+<span title="&#92;bisansphi">𝟇</span>
 <span title="&#92;bisansvarrho">𝟈</span>
 <span title="&#92;bisansvarpi">𝟉</span>
 <span title="&#92;bfDigamma">𝟊</span>

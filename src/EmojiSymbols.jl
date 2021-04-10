@@ -1,6 +1,10 @@
 module EmojiSymbols
 
-include(normpath(@__DIR__, "../gen/emoji_symbols.jl"))
+if VERSION < v"1.7.0-DEV.849"
+    include(normpath(@__DIR__, "../gen/emoji_symbols_below_170_DEV_849.jl"))
+else
+    include(normpath(@__DIR__, "../gen/emoji_symbols.jl"))
+end
 include(normpath(@__DIR__, "../gen/emoji_name_table.jl"))
 include(normpath(@__DIR__, "../gen/latex_name_table.jl"))
 

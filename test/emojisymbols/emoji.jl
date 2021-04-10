@@ -5,7 +5,11 @@ using Test
 legacy_emoji = ["☺", "☎", "🅰", "▫", "㊗", "◼", "⤵", "✖", "❄", "‼", "↔", "☑", "♥", "✉", "♣", "✒", "✈", "®", "〰", "🅱", "↪", "⬅", "⤴", "◀", "❇", "♨", "◻", "✴", "✔", "🈷", "▶", "☁", "♠", "ℹ", "☀", "⁉", "©", "⬇", "↙", "⚠", "〽", "▪", "✂", "✌", "↗", "™", "Ⓜ", "↘", "➡", "↖", "㊙", "☝", "↕", "⬆", "♻", "🅿", "🈂", "♦", "↩", "✏", "🅾", "❤", "✳"]
 
 using REPL
-@test !haskey(REPL.REPLCompletions.emoji_symbols, "\\:thinking_face:")
+if VERSION < v"1.7.0-DEV.849"
+    @test !haskey(REPL.REPLCompletions.emoji_symbols, "\\:thinking_face:")
+else
+    @test haskey(REPL.REPLCompletions.emoji_symbols, "\\:thinking_face:")
+end
 s1 = values(copy(REPL.REPLCompletions.emoji_symbols))
 @test intersect(legacy_emoji, s1) == legacy_emoji
 
