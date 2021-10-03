@@ -25,6 +25,17 @@ jobs:
       - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-runtest@v1
 
+  TestOnWindows:
+    needs: Test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: julia-actions/setup-julia@v1
+        with:
+          version: 1.6.3
+      - uses: julia-actions/julia-buildpkg@v1
+      - uses: julia-actions/julia-runtest@v1
+
   Coverage:
     needs: Test
     if: github.event.ref == 'refs/heads/master'
