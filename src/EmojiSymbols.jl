@@ -1,10 +1,6 @@
 module EmojiSymbols
 
-if VERSION < v"1.7.0-DEV.849"
-    include(normpath(@__DIR__, "../gen/emoji_symbols_below_170_DEV_849.jl"))
-else
-    include(normpath(@__DIR__, "../gen/emoji_symbols.jl"))
-end
+include(normpath(@__DIR__, "../gen/emoji_symbols.jl"))
 include(normpath(@__DIR__, "../gen/emoji_name_table.jl"))
 include(normpath(@__DIR__, "../gen/latex_name_table.jl"))
 
@@ -45,33 +41,38 @@ end
 #     0x00a9 <= n <= 0x00ae || 0x200d <= n <= 0x3299 || 0x1f004 <= n <= 0x1f251 || 0x1f300 <= n <= 0x1fad6
 # latex ranges
 #     0x00a1 <= n <= 0x03f6 || 0x1d2c <= n <= 0x1dbf || 0x2002 <= n <= 0x3012 || 0x1d400 <= n <= 0x1d7ff
-function lookup_and_show_short_name(io::IO, ::MIME"text/plain", c::Char)
+function lookup_and_show_short_name(io::IO, ::MIME"text/plain", c::Char, s::String)
     n = UInt32(c)
     if 0x1f004 <= n <= 0x1f251 || 0x1f300 <= n <= 0x1fad6
-        haskey(emoji_name_table, c) && printstyled(io, emoji_name_table[c], ' ', color=:cyan)
+        haskey(emoji_name_table, s) && printstyled(io, emoji_name_table[s], ' ', color=:cyan)
     elseif 0x1d2c <= n <= 0x1dbf || 0x1d400 <= n <= 0x1d7ff
-        haskey(latex_name_table, c) && printstyled(io, latex_name_table[c], ' ', color=:cyan)
+        haskey(latex_name_table, s) && printstyled(io, latex_name_table[s], ' ', color=:cyan)
     elseif 0x00a9 <= n <= 0x00ae || 0x200d <= n <= 0x3299 ||   # emoji
            0x00a1 <= n <= 0x03f6 || 0x2002 <= n <= 0x3012      # latex
-        if haskey(emoji_name_table, c)
-            printstyled(io, emoji_name_table[c], ' ', color=:cyan)
-        elseif haskey(latex_name_table, c)
-            printstyled(io, latex_name_table[c], ' ', color=:cyan)
+        if haskey(emoji_name_table, s)
+            printstyled(io, emoji_name_table[s], ' ', color=:cyan)
+        elseif haskey(latex_name_table, s)
+            printstyled(io, latex_name_table[s], ' ', color=:cyan)
         end
     end
 end
 
 function Base.show(io::IO, mime::MIME"text/plain", c::Char)
-    lookup_and_show_short_name(io, mime, c)
+    lookup_and_show_short_name(io, mime, c, string(c))
     show_char(io, mime, c)
 end
 
+const MAX_SYMBOL_LENGTH = 5
 function Base.show(io::IO, mime::MIME"text/plain", s::String)
     len = length(s)
     if isone(len)
-        lookup_and_show_short_name(io, mime, first(s))
-    elseif len == 2
-        haskey(latex_name_table, s) && printstyled(io, latex_name_table[s], ' ', color=:cyan)
+        lookup_and_show_short_name(io, mime, first(s), s)
+    elseif len <= MAX_SYMBOL_LENGTH
+        if haskey(emoji_name_table, s)
+            printstyled(io, emoji_name_table[s], ' ', color=:cyan)
+        elseif haskey(latex_name_table, s)
+            printstyled(io, latex_name_table[s], ' ', color=:cyan)
+        end
     end
     print(io, repr(s))
 end
