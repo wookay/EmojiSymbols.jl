@@ -65,7 +65,8 @@ end
 const MAX_SYMBOL_LENGTH = 5
 function Base.show(io::IO, mime::MIME"text/plain", s::String)
     len = length(s)
-    if isone(len)
+    if iszero(len)
+    elseif isone(len)
         lookup_and_show_short_name(io, mime, first(s), s)
     elseif len <= MAX_SYMBOL_LENGTH
         if haskey(emoji_name_table, s)
