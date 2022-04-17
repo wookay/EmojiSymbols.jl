@@ -1,28 +1,33 @@
 module test_emojisymbols_emoji
 
 using Test
-
-legacy_emoji = ["☺", "☎", "🅰", "▫", "㊗", "◼", "⤵", "✖", "❄", "‼", "↔", "☑", "♥", "✉", "♣", "✒", "✈", "®", "〰", "🅱", "↪", "⬅", "⤴", "◀", "❇", "♨", "◻", "✴", "✔", "🈷", "▶", "☁", "♠", "ℹ", "☀", "⁉", "©", "⬇", "↙", "⚠", "〽", "▪", "✂", "✌", "↗", "™", "Ⓜ", "↘", "➡", "↖", "㊙", "☝", "↕", "⬆", "♻", "🅿", "🈂", "♦", "↩", "✏", "🅾", "❤", "✳"]
-
 using REPL
-if VERSION < v"1.7.0-DEV.849"
-    @test !haskey(REPL.REPLCompletions.emoji_symbols, "\\:thinking_face:")
-else
-    @test haskey(REPL.REPLCompletions.emoji_symbols, "\\:thinking_face:")
+
+function compat_v170_DEV_849()
+    @test REPL.REPLCompletions.emoji_symbols["\\:thinking_face:"] == "🤔"
 end
-s1 = values(copy(REPL.REPLCompletions.emoji_symbols))
-@test intersect(legacy_emoji, s1) == legacy_emoji
+
+function not_compat_v170_DEV_849()
+    @test !haskey(REPL.REPLCompletions.emoji_symbols, "\\:thinking_face:")
+end
+
+
+# part 1
+VERSION >= v"1.7.0-DEV.849" ? compat_v170_DEV_849() : not_compat_v170_DEV_849()
+
+(emoji_symbols, latex_symbols) = copy(REPL.REPLCompletions.emoji_symbols), copy(REPL.REPLCompletions.latex_symbols)
+symbols_latex_canonical = isdefined(REPL.REPLCompletions, :symbols_latex_canonical) ? copy(REPL.REPLCompletions.symbols_latex_canonical) : Dict()
+loaded_EmojiSymbols = haskey(Base.loaded_modules, Base.PkgId(Base.UUID("c599478c-de41-4aed-94ea-b47665d7a42a"), "EmojiSymbols"))
 
 using EmojiSymbols
-s2 = values(EmojiSymbols.emoji_symbols)
-@test isempty(intersect(legacy_emoji, s2))
-@test REPL.REPLCompletions.emoji_symbols["\\:thinking_face:"] == "🤔"
+loaded_EmojiSymbols && EmojiSymbols.__init__()
 
-@test EmojiSymbols.emoji_name_table["🤔"] == "\\:thinking_face:"
-@test sprint(show, MIME"text/plain"(), '🤔') == "\\:thinking_face: '🤔': Unicode U+1F914 (category So: Symbol, other)"
-@test sprint(show, MIME"text/plain"(), "🤔") == "\\:thinking_face: \"🤔\""
-@test sprint(show, MIME"text/plain"(), '☔') == "\\:umbrella_with_rain_drops: '☔': Unicode U+2614 (category So: Symbol, other)"
+# part 2
+compat_v170_DEV_849()
 
-@test string('🤔') == string("🤔") == "🤔"
+EmojiSymbols.reset_REPL_completions(emoji_symbols, latex_symbols, symbols_latex_canonical)
+
+# part 1
+VERSION >= v"1.7.0-DEV.849" ? compat_v170_DEV_849() : not_compat_v170_DEV_849()
 
 end # module test_emojisymbols_emoji

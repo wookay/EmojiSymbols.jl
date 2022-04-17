@@ -7,17 +7,6 @@ additional Emoji symbols for Julia REPL 🤔
 |  [![][docs-latest-img]][docs-latest-url]  |  [![][actions-img]][actions-url]  [![][codecov-img]][codecov-url]  |
 
 
-```julia
-julia> using EmojiSymbols
-
-julia> '🤔'
-\:thinking_face: '🤔': Unicode U+1F914 (category So: Symbol, other)
-
-julia> 'β'
-\beta 'β': Unicode U+03B2 (category Ll: Letter, lowercase)
-```
-
-
 ### additional Emoji symbols
 * Julia VERSION < v"1.7.0-DEV.849"
 
