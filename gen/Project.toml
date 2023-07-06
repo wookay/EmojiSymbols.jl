@@ -1,7 +1,0 @@
-[deps]
-REPL = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
-Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
-JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
-
-[compat]
-JSON = "0.21"
