@@ -3,6 +3,30 @@ module test_emojisymbols_latex
 using Test
 using REPL
 
+function compat_v1110_DEV_12()
+    @test REPL.REPLCompletions.latex_symbols["\\guillemotleft"] == "«"
+end
+
+function not_compat_v1110_DEV_12()
+    @test !haskey(REPL.REPLCompletions.latex_symbols, "\\guillemotleft")
+end
+
+function compat_v1100_DEV_1204()
+    @test REPL.REPLCompletions.latex_symbols["\\leftarrowless"] == "\u2977"
+end
+
+function not_compat_v1100_DEV_1204()
+    @test !haskey(REPL.REPLCompletions.latex_symbols, "\\leftarrowless")
+end
+
+function compat_v1100_DEV_570()
+    @test REPL.REPLCompletions.latex_symbols["\\veedot"] == "⟇"
+end
+
+function not_compat_v1100_DEV_570()
+    @test !haskey(REPL.REPLCompletions.latex_symbols, "\\veedot")
+end
+
 function compat_v190_DEV_346()
     @test !haskey(REPL.REPLCompletions.latex_symbols, "\\sqspne")
     @test REPL.REPLCompletions.latex_symbols["\\sqsupsetneq"] == "⋥"
@@ -37,28 +61,25 @@ function not_compat_v170_DEV_893()
     @test !haskey(REPL.REPLCompletions.latex_symbols, "\\nand")
 end
 
-function compat_v1110_DEV_12()
-    @test REPL.REPLCompletions.latex_symbols["\\guillemotleft"] == "«"
-end
-
-function not_compat_v1110_DEV_12()
-    @test !haskey(REPL.REPLCompletions.latex_symbols, "\\guillemotleft")
-end
 
 function test_part1()
-    VERSION >= v"1.9.0-DEV.346" ? compat_v190_DEV_346() : not_compat_v190_DEV_346()
-    VERSION >= v"1.9.0-DEV.332" ? compat_v190_DEV_332() : not_compat_v190_DEV_332()
-    VERSION >= v"1.7.0-DEV.894" ? compat_v170_DEV_894() : not_compat_v170_DEV_894()
-    VERSION >= v"1.7.0-DEV.893" ? compat_v170_DEV_893() : not_compat_v170_DEV_893()
-    VERSION >= v"1.11.0-DEV.12" ? compat_v1110_DEV_12() : not_compat_v1110_DEV_12()
+    VERSION >= v"1.11.0-DEV.12"   ? compat_v1110_DEV_12()   : not_compat_v1110_DEV_12()
+    VERSION >= v"1.10.0-DEV.1204" ? compat_v1100_DEV_1204() : not_compat_v1100_DEV_1204()
+    VERSION >= v"1.10.0-DEV.570"  ? compat_v1100_DEV_570()  : not_compat_v1100_DEV_570()
+    VERSION >= v"1.9.0-DEV.346"   ? compat_v190_DEV_346()   : not_compat_v190_DEV_346()
+    VERSION >= v"1.9.0-DEV.332"   ? compat_v190_DEV_332()   : not_compat_v190_DEV_332()
+    VERSION >= v"1.7.0-DEV.894"   ? compat_v170_DEV_894()   : not_compat_v170_DEV_894()
+    VERSION >= v"1.7.0-DEV.893"   ? compat_v170_DEV_893()   : not_compat_v170_DEV_893()
 end
 
 function test_part2()
+    compat_v1110_DEV_12()
+    compat_v1100_DEV_1204()
+    compat_v1100_DEV_570()
     compat_v190_DEV_346()
     compat_v190_DEV_332()
     compat_v170_DEV_894()
     compat_v170_DEV_893()
-    compat_v1110_DEV_12()
 end
 
 
