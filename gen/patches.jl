@@ -2,7 +2,8 @@
 
 include(normpath(@__DIR__, "../src/types.jl"))
 
-repl_patches::Vector{Patch} = [
+# repl_patches::Vector{Patch}
+repl_patches = Vector{Patch}([
     Patch(v"1.13.0-DEV.595",
           "229a6984ee142283d81955d8d53d7985fd5736ca",
           AddLatexSymbols(1)),          # \hookunderrightarrow => 🢲
@@ -28,9 +29,10 @@ repl_patches::Vector{Patch} = [
           "559244b383cf1a146f6c8e4ed81b1b746276abe0",
           AddLatexSymbols(1),           # \neq => ≠
           AddSymbolsLatexCanonical(1)), # ≠    => \ne
-]
+])
 
-const LATEST_PATCH_VERSION::VersionNumber = first(repl_patches).version
+# LATEST_PATCH_VERSION::VersionNumber
+const LATEST_PATCH_VERSION = first(repl_patches).version
 
 function patches_to_be_loaded(; down_to::VersionNumber = VERSION,
                                 up_to::VersionNumber = LATEST_PATCH_VERSION)::Vector{Patch}
