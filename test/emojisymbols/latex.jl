@@ -3,6 +3,10 @@ module test_emojisymbols_latex
 using Test
 using REPL
 
+function compat_v1130_DEV_595()
+    @test REPL.REPLCompletions.latex_symbols["\\hookunderrightarrow"] == "🢲"
+end
+
 function compat_v1110_DEV_12()
     @test REPL.REPLCompletions.latex_symbols["\\guillemotleft"] == "«"
 end
@@ -73,13 +77,18 @@ function test_part1()
 end
 
 function test_part2()
-    compat_v1110_DEV_12()
-    compat_v1100_DEV_1204()
-    compat_v1100_DEV_570()
-    compat_v190_DEV_346()
-    compat_v190_DEV_332()
-    compat_v170_DEV_894()
-    compat_v170_DEV_893()
+    for f in [
+        compat_v1130_DEV_595
+        compat_v1110_DEV_12
+        compat_v1100_DEV_1204
+        compat_v1100_DEV_570
+        compat_v190_DEV_346
+        compat_v190_DEV_332
+        compat_v170_DEV_894
+        compat_v170_DEV_893
+    ]
+        f()
+    end
 end
 
 

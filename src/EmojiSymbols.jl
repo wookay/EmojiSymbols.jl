@@ -4,6 +4,10 @@ include(normpath(@__DIR__, "../gen/v1.7.0-DEV.jl"))
 include(normpath(@__DIR__, "../gen/v1.9.0-DEV.jl"))
 include(normpath(@__DIR__, "../gen/v1.10.0-DEV.jl"))
 include(normpath(@__DIR__, "../gen/v1.11.0-DEV.jl"))
+include(normpath(@__DIR__, "../gen/v1.13.0-DEV.jl"))
+
+export Patch, patches_to_be_loaded, LATEST_PATCH_VERSION
+include(normpath(@__DIR__, "../gen/patches.jl"))
 
 function create_symbols_latex(REPL::Module)
     (REPL.symbol_latex ∘ string)()
@@ -31,6 +35,7 @@ function __init__()
     init_v190_DEV(REPL)
     init_v1100_DEV(REPL)
     init_v1110_DEV(REPL)
+    init_v1130_DEV(REPL)
     create_symbols_latex(REPL)
 end
 
