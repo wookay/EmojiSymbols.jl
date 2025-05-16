@@ -2,13 +2,17 @@
 
 abstract type AbstractPatchAction end
 
-for action in (:AddEmojiSymbols,
+for action in (:Load2fc32f2ea2,
+               :AddEmojiSymbols,
                :AddLatexSymbols,
-           :ReplaceLatexSymbols,
+               :RemoveLatexSymbols,
                :AddSymbolsLatexCanonical)
     expr = quote
         struct $(action) <: AbstractPatchAction
-            delta::Int
+            symbol_pairs::Vector{Pair{String, String}}
+            function $(action)(symbol_pairs...)
+                new(collect(symbol_pairs))
+            end
         end
     end
     Core.eval(@__MODULE__, expr)
@@ -16,10 +20,9 @@ end
 
 struct Patch
     version::VersionNumber
-    commit::String
     actions::Vector{<: AbstractPatchAction}
-    function Patch(version, commit, actions...)
-        new(version, commit, collect(actions))
+    function Patch(version, actions...)
+        new(version, collect(actions))
     end
 end
 
