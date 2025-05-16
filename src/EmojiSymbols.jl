@@ -13,11 +13,11 @@ include("patches.jl")
 include("backup.jl")
 
 function get_repl()::Module
-    if !isassigned(Base.REPL_MODULE_REF)
+    if isassigned(Base.REPL_MODULE_REF)
+        Base.REPL_MODULE_REF[]
+    else
         eval(:(using REPL: REPL))
         REPL
-    else
-        Base.REPL_MODULE_REF[]
     end
 end
 

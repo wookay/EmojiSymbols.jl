@@ -2,49 +2,61 @@ module test_emojisymbols_repl_completions
 
 using Test
 
-function found(ver::VersionNumber, ver_check::Bool, table::Dict{String, String}, pair::Pair{String, String}, cur_ver::VersionNumber = VERSION)::Bool
+function found(ver_check::Bool, down_to::VersionNumber, up_to::VersionNumber, table::Dict{String, String}, pair::Pair{String, String})::Bool
     (k, v) = pair
-    if ver_check && cur_ver < ver
+    if ver_check && down_to < up_to
         return haskey(table, k) ? table[k] != v : true
     end
     return haskey(table, k) && table[k] == v
 end
 
-function compat_v1_13(mod::Module; ver_check::Bool)
-    found(v"1.13.0-DEV.595", ver_check, mod.latex_symbols, "\\hookunderrightarrow" => "🢲")
+function compat_v1_13(mod::Module; ver_check::Bool, down_to::VersionNumber = VERSION)
+    found(ver_check, down_to, v"1.13.0-DEV.595", mod.latex_symbols, "\\hookunderrightarrow" => "🢲")
 end
 
-function compat_v1_11(mod::Module; ver_check::Bool)
-    found(v"1.11.0-DEV.12", ver_check, mod.latex_symbols, "\\guillemotleft" => "«")
+function compat_v1_11(mod::Module; ver_check::Bool, down_to::VersionNumber = VERSION)
+    found(ver_check, down_to, v"1.11.0-DEV.12", mod.latex_symbols, "\\guillemotleft" => "«")
 end
 
-function compat_v1_10(mod::Module; ver_check::Bool)
-    found(v"1.10.0-DEV.1204", ver_check, mod.latex_symbols, "\\leftarrowless" => "\u2977") &&
-    found(v"1.10.0-DEV.570", ver_check, mod.latex_symbols, "\\veedot" => "⟇")
+function compat_v1_10(mod::Module; ver_check::Bool, down_to::VersionNumber = VERSION)
+    found(ver_check, down_to, v"1.10.0-DEV.1204", mod.latex_symbols, "\\leftarrowless" => "\u2977") &&
+    found(ver_check, down_to, v"1.10.0-DEV.570", mod.latex_symbols, "\\veedot" => "⟇")
 end
 
-function compat_v1_9(mod::Module; ver_check::Bool)
+function compat_v1_9(mod::Module; ver_check::Bool, down_to::VersionNumber = VERSION)
     ver346 = v"1.9.0-DEV.346"
-    !found(ver346, ver_check, mod.latex_symbols, "\\sqspne" => "⋥") &&
-     found(ver346, ver_check, mod.latex_symbols, "\\sqsupsetneq" => "⋥") &&
-    found(v"1.9.0-DEV.332", ver_check, mod.latex_symbols, "\\neq" => "≠")
+    !found(ver_check, down_to, ver346, mod.latex_symbols, "\\sqspne" => "⋥") &&
+    found(ver_check, down_to, ver346, mod.latex_symbols, "\\sqsupsetneq" => "⋥") &&
+    found(ver_check, down_to, v"1.9.0-DEV.332", mod.latex_symbols, "\\neq" => "≠")
 end
 
-function compat_v1_7(mod::Module; ver_check::Bool)
-    found(v"1.7.0-DEV.894", ver_check, mod.latex_symbols, "\\Top" => "⫪") &&
-    found(v"1.7.0-DEV.893", ver_check, mod.latex_symbols, "\\nand" => "⊼") &&
-    found(v"1.7.0-DEV.849", ver_check, mod.latex_symbols, "\\^ltphi" => "ᶲ") &&
-    found(v"1.7.0-DEV.849", ver_check, mod.emoji_symbols, "\\:thinking_face:" => "🤔")
+function compat_v1_7(mod::Module; ver_check::Bool, down_to::VersionNumber = VERSION)
+    found(ver_check, down_to, v"1.7.0-DEV.894", mod.latex_symbols, "\\Top" => "⫪") &&
+    found(ver_check, down_to, v"1.7.0-DEV.893", mod.latex_symbols, "\\nand" => "⊼") &&
+    found(ver_check, down_to, v"1.7.0-DEV.849", mod.latex_symbols, "\\^ltphi" => "ᶲ") &&
+    found(ver_check, down_to, v"1.7.0-DEV.849", mod.emoji_symbols, "\\:thinking_face:" => "🤔")
 end
 
-compats = (compat_v1_13, compat_v1_11, compat_v1_9, compat_v1_7)
+module MyREPL
+module REPLCompletions
+emoji_symbols = Dict{String, String}()
+latex_symbols = Dict{String, String}()
+end
+end # module MyREPL
+@test compat_v1_13(MyREPL.REPLCompletions; ver_check = true, down_to = v"1.13.0-DEV.594")
+
+merge!(MyREPL.REPLCompletions.latex_symbols, Dict("\\hookunderrightarrow" => "🢲"))
+@test compat_v1_13(MyREPL.REPLCompletions; ver_check = false, down_to = v"1.13.0-DEV.594")
+
+
+compats = (compat_v1_13, compat_v1_11, compat_v1_10, compat_v1_9, compat_v1_7)
 
 function get_repl()::Module
-    if !isassigned(Base.REPL_MODULE_REF)
+    if isassigned(Base.REPL_MODULE_REF)
+        Base.REPL_MODULE_REF[]
+    else
         eval(:(using REPL: REPL))
         REPL
-    else
-        Base.REPL_MODULE_REF[]
     end
 end
 
