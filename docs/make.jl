@@ -17,5 +17,6 @@ makedocs(
         "Emoji symbols" => "emoji_symbols.md",
         "LaTeX symbols" => "latex_symbols.md",
         "API" => "api.md",
+        "Patches" => "patches.md",
     ],
 )
