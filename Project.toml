@@ -2,7 +2,7 @@ name = "EmojiSymbols"
 uuid = "c599478c-de41-4aed-94ea-b47665d7a42a"
 keywords = ["emoji", "latex", "REPL"]
 license = "MIT"
-desc = "additional Emoji, Latex symbols for Julia REPL 🤔"
+desc = "additional Emoji, LaTeX Symbols for Julia REPL 🤔"
 authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
 version = "0.2.0"
 
