@@ -1,37 +1,27 @@
 module EmojiSymbols
 
-include(normpath(@__DIR__, "../gen/v1.7.0-DEV.jl"))
-include(normpath(@__DIR__, "../gen/v1.9.0-DEV.jl"))
-include(normpath(@__DIR__, "../gen/v1.10.0-DEV.jl"))
-include(normpath(@__DIR__, "../gen/v1.11.0-DEV.jl"))
+export Patch
+include("types.jl")
 
-function create_symbols_latex(REPL::Module)
-    (REPL.symbol_latex ∘ string)()
-end
+include(normpath(@__DIR__, "../gen/repl_completions_patches.jl"))
 
-function merge_symbols_latex_canonical!(REPL::Module, symbols_latex_canonical)
-    if isdefined(REPL.REPLCompletions, :symbols_latex_canonical)
-        merge!(REPL.REPLCompletions.symbols_latex_canonical, symbols_latex_canonical)
-    end
-end
+export LATEST_PATCH_VERSION
+export patches_to_be_loaded
+export apply_patches_to_repl_completions
+include("patches.jl")
 
-function reset_REPL_completions(emoji_symbols, latex_symbols, symbols_latex_canonical)
-    REPL = Base.REPL_MODULE_REF[]
-    copy!(REPL.REPLCompletions.emoji_symbols, emoji_symbols)
-    copy!(REPL.REPLCompletions.latex_symbols, latex_symbols)
-    if isdefined(REPL.REPLCompletions, :symbols_latex_canonical)
-        copy!(REPL.REPLCompletions.symbols_latex_canonical, symbols_latex_canonical)
-    end
-    empty!(REPL.symbols_latex)
-end
+include("backup.jl")
 
 function __init__()
-    REPL = Base.REPL_MODULE_REF[]
-    init_v170_DEV(REPL)
-    init_v190_DEV(REPL)
-    init_v1100_DEV(REPL)
-    init_v1110_DEV(REPL)
-    create_symbols_latex(REPL)
+    R = Base.REPL_MODULE_REF[]
+    patches = patches_to_be_loaded()
+    cnt = apply_patches_to_repl_completions(patches, R.REPLCompletions)
+
+    if haskey(ENV, "CI")
+        printstyled(@__MODULE__, color = :blue)
+        printstyled(": Applied ", cnt, " patches.", color = :cyan)
+        println()
+    end
 end
 
 end # module EmojiSymbols
