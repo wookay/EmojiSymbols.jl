@@ -16,11 +16,11 @@ additional Emoji, LaTeX Symbols for Julia REPL 🤔
  _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
 |__/                   |
 
-julia> \hookunderrightarrow <tab>
+julia> \hookunderrightarrow <TAB>
 
 julia> using EmojiSymbols
 
-julia> \hookunderrightarrow <tab>
+julia> \hookunderrightarrow <TAB>
 
 julia> 🢲
 ```
