@@ -6,6 +6,7 @@ using Test
 global cur_ver = VERSION
 
 function found(ver::VersionNumber, ver_check::Bool, table::Dict{String, String}, pair::Pair{String, String})::Bool
+    global cur_ver
     (k, v) = pair
     if ver_check
         if cur_ver < ver
@@ -51,8 +52,17 @@ end
 
 compats = (compat_v1_13, compat_v1_11, compat_v1_9, compat_v1_7)
 
+function get_repl()::Module
+    if !isassigned(Base.REPL_MODULE_REF)
+        eval(:(using REPL: REPL))
+        REPL
+    else
+        Base.REPL_MODULE_REF[]
+    end
+end
+
 function test_part1()
-    R = Base.REPL_MODULE_REF[]
+    R::Module = get_repl()
     for f in compats
         b = f(R.REPLCompletions, ver_check = true)
         @test b
@@ -69,7 +79,7 @@ using EmojiSymbols
 already_loaded && EmojiSymbols.__init__()
 
 function test_part2()
-    R = Base.REPL_MODULE_REF[]
+    R::Module = get_repl()
     for f in compats
         b = f(R.REPLCompletions, ver_check = false)
         @test b
