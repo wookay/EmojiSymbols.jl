@@ -10,7 +10,7 @@ const LATEST_PATCH_VERSION = first(repl_completions_patches).version
 function patches_to_be_loaded(; down_to::VersionNumber = VERSION,
                                 up_to::VersionNumber   = LATEST_PATCH_VERSION)::Vector{Patch}
     filter(repl_completions_patches) do patch
-        down_to <= patch.version <= up_to
+        down_to < patch.version <= up_to
     end
 end
 

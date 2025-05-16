@@ -2,25 +2,12 @@ module test_emojisymbols_repl_completions
 
 using Test
 
-# cur_ver::VersionNumber
-global cur_ver = VERSION
-
-function found(ver::VersionNumber, ver_check::Bool, table::Dict{String, String}, pair::Pair{String, String})::Bool
-    global cur_ver
+function found(ver::VersionNumber, ver_check::Bool, table::Dict{String, String}, pair::Pair{String, String}, cur_ver::VersionNumber = VERSION)::Bool
     (k, v) = pair
-    if ver_check
-        if cur_ver < ver
-            if haskey(table, k)
-                table[k] != v
-            else
-                true
-            end
-        else
-            haskey(table, k) && table[k] == v
-        end
-    else
-        haskey(table, k) && table[k] == v
+    if ver_check && cur_ver < ver
+        return haskey(table, k) ? table[k] != v : true
     end
+    return haskey(table, k) && table[k] == v
 end
 
 function compat_v1_13(mod::Module; ver_check::Bool)
