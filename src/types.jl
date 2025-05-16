@@ -18,6 +18,12 @@ for action in (:Load2fc32f2ea2,
     Core.eval(@__MODULE__, expr)
 end
 
+"""
+    struct Patch
+        version::VersionNumber
+        actions::Vector{<: AbstractPatchAction}
+    end
+"""
 struct Patch
     version::VersionNumber
     actions::Vector{<: AbstractPatchAction}

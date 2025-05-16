@@ -13,7 +13,12 @@ include("patches.jl")
 include("backup.jl")
 
 function __init__()
-    R = Base.REPL_MODULE_REF[]
+    if !isassigned(Base.REPL_MODULE_REF)
+        eval(:(using REPL: REPL))
+        R = REPL
+    else
+        R = Base.REPL_MODULE_REF[]
+    end
     patches = patches_to_be_loaded()
     cnt = apply_patches_to_repl_completions(patches, R.REPLCompletions)
 

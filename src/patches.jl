@@ -3,6 +3,10 @@
 # LATEST_PATCH_VERSION::VersionNumber
 const LATEST_PATCH_VERSION = first(repl_completions_patches).version
 
+"""
+    patches_to_be_loaded(; down_to::VersionNumber = VERSION,
+                           up_to::VersionNumber   = LATEST_PATCH_VERSION)::Vector{Patch}
+"""
 function patches_to_be_loaded(; down_to::VersionNumber = VERSION,
                                 up_to::VersionNumber   = LATEST_PATCH_VERSION)::Vector{Patch}
     filter(repl_completions_patches) do patch
@@ -31,6 +35,9 @@ function load_2fc32f2ea2(mod::Module, isdefined_symbols_latex_canonical::Bool)::
     cnt
 end
 
+"""
+    apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module)::Int
+"""
 function apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module)::Int
     cnt::Int = 0
     isdefined_symbols_latex_canonical::Bool = isdefined(mod, :symbols_latex_canonical)
@@ -53,10 +60,10 @@ function apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module):
                         end
                     end
                     cnt += 1
-                end
+                end # for (k, v) in action.symbol_pairs
             end
         end
-    end
+    end # for patch in reverse(patches)
     cnt
 end
 
