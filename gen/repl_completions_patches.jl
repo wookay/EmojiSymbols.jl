@@ -1,6 +1,6 @@
 # module EmojiSymbols
 
-const repl_completions_patches = Vector{Patch}([
+const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     # v1.13
     Patch(v"1.13.0-DEV.595", # 229a6984ee142283d81955d8d53d7985fd5736ca
         AddLatexSymbols("\\hookunderrightarrow" => "🢲")),
@@ -162,5 +162,8 @@ const repl_completions_patches = Vector{Patch}([
     Patch(v"1.7.0-DEV.849", # 2fc32f2ea247c0c03ea78b229ff159af84c45fb1
         Load2fc32f2ea2())
 ])
+
+# LATEST_PATCH_VERSION::VersionNumber
+const LATEST_PATCH_VERSION = first(REPL_COMPLETIONS_PATCHES).version
 
 # module EmojiSymbols

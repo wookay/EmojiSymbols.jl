@@ -10,8 +10,6 @@ export patches_to_be_loaded
 export apply_patches_to_repl_completions
 include("patches.jl")
 
-include("backup.jl")
-
 function get_repl()::Module
     if isassigned(Base.REPL_MODULE_REF)
         Base.REPL_MODULE_REF[]

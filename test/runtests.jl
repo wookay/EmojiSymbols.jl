@@ -1,2 +1,2 @@
 using Jive
-runtests(@__DIR__)
+runtests(@__DIR__, targets="repl emojisymbols")

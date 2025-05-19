@@ -1,15 +1,14 @@
 # module EmojiSymbols
 
-# LATEST_PATCH_VERSION::VersionNumber
-const LATEST_PATCH_VERSION = first(repl_completions_patches).version
-
 """
     patches_to_be_loaded(; down_to::VersionNumber = VERSION,
-                           up_to::VersionNumber   = LATEST_PATCH_VERSION)::Vector{Patch}
+                           up_to::VersionNumber   = LATEST_PATCH_VERSION,
+                           patches::Vector{Patch} = REPL_COMPLETIONS_PATCHES)::Vector{Patch}
 """
 function patches_to_be_loaded(; down_to::VersionNumber = VERSION,
-                                up_to::VersionNumber   = LATEST_PATCH_VERSION)::Vector{Patch}
-    filter(repl_completions_patches) do patch
+                                up_to::VersionNumber   = LATEST_PATCH_VERSION,
+                                patches::Vector{Patch} = REPL_COMPLETIONS_PATCHES)::Vector{Patch}
+    filter(patches) do patch
         down_to < patch.version <= up_to
     end
 end
