@@ -16,13 +16,19 @@ additional Emoji, LaTeX Symbols for Julia REPL 🤔
  _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
 |__/                   |
 
-julia> \hookunderrightarrow <TAB>
+julia> \hookunderrightarrow <tab>
 
 julia> using EmojiSymbols
 
-julia> \hookunderrightarrow <TAB>
+julia> \hookunderrightarrow <tab>
 
 julia> 🢲
+
+julia> '🢲'
+'\U1f8b2': Unicode U+1F8B2 (category Cn: Other, not assigned), input as \hookunderrightarrow<tab>
+
+julia> '🤔'
+'🤔': Unicode U+1F914 (category So: Symbol, other), input as \:thinking_face:<tab>
 ```
 
 [docs-latest-img]: https://img.shields.io/badge/docs-latest-blue.svg
