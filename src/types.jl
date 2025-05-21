@@ -1,5 +1,8 @@
 # module EmojiSymbols
 
+"""
+    abstract type AbstractPatchAction end
+"""
 abstract type AbstractPatchAction end
 
 for action in (:Load2fc32f2ea2,
@@ -17,6 +20,42 @@ for action in (:Load2fc32f2ea2,
     end
     Core.eval(@__MODULE__, expr)
 end
+
+"""
+    struct Load2fc32f2ea2 <: AbstractPatchAction
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+Load2fc32f2ea2
+
+"""
+    struct AddEmojiSymbols <: AbstractPatchAction
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+AddEmojiSymbols
+
+"""
+    struct AddLatexSymbols <: AbstractPatchAction
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+AddLatexSymbols
+
+"""
+    struct RemoveLatexSymbols <: AbstractPatchAction
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+RemoveLatexSymbols
+
+"""
+    struct AddSymbolsLatexCanonical <: AbstractPatchAction
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+AddSymbolsLatexCanonical
+
 
 """
     struct Patch

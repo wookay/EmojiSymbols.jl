@@ -36,6 +36,8 @@ end
 
 """
     apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module)::Int
+
+Load each symbols into `mod` (like `REPL.REPLCompletions`)
 """
 function apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module)::Int
     cnt::Int = 0
