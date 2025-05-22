@@ -1,3 +1,6 @@
+```@raw html
+<!-- generated -->
+```
 # LaTeX symbols
 
 | short name                   | unicode |
@@ -5102,7 +5105,4 @@
 <span title="\tteight">𝟾</span>
 <span title="\ttnine">𝟿</span>
 <span title="\hookunderrightarrow">🢲</span>
-```
-```@raw html
-<!-- generated -->
 ```

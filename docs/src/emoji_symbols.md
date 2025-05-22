@@ -1,3 +1,6 @@
+```@raw html
+<!-- generated -->
+```
 # Emoji symbols
 
 | short name                                    | unicode |
@@ -2488,7 +2491,4 @@
 <span title="\:heart_hands:">🫶</span>
 <span title="\:leftwards_pushing_hand:">🫷</span>
 <span title="\:rightwards_pushing_hand:">🫸</span>
-```
-```@raw html
-<!-- generated -->
 ```

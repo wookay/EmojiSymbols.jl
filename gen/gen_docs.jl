@@ -1,6 +1,6 @@
 using EmojiSymbols
 using REPL
-using Markdown: MD, Header, Table, Code, List, Paragraph, htmlesc
+using Markdown: MD, Header, Table, Code, List, Paragraph, htmlesc, @md_str
 
 function tag_span(k, v)::String
     string("<span title=\"", htmlesc(k), "\">", v, "</span>")
@@ -33,12 +33,12 @@ function write_doc(name::Symbol, title::String)
     filepath = normpath(@__DIR__, "../docs/src/$name.md")
     md = generate_markdown(title, getfield(REPL.REPLCompletions, name))
     @info "save $title" filepath
-    write(filepath, string(md, generated_comments))
+    write(filepath, string(generated_comments, md))
 end
 
 function gen_patches(title::String)
     contents = []
-    for patch in EmojiSymbols.repl_completions_patches
+    for patch in EmojiSymbols.REPL_COMPLETIONS_PATCHES
         push!(contents, Header{3}(patch.version))
         for action in patch.actions
             push!(contents, List(Paragraph((String ∘ nameof ∘ typeof)(action))))
@@ -48,14 +48,18 @@ function gen_patches(title::String)
             end
         end
     end
-    MD(Header{1}(title), contents...)
+    p = md"""
+`REPL_COMPLETIONS_PATCHES` contains the actual patch data,
+which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
+"""
+    MD(Header{1}(title), p, contents...)
 end
 
 function write_doc_patches(name::Symbol, title::String)
     filepath = normpath(@__DIR__, "../docs/src/$name.md")
     md = gen_patches(title)
     @info "save $title" filepath
-    write(filepath, string(md, generated_comments))
+    write(filepath, string(generated_comments, md))
 end
 
 if true # false

@@ -43,7 +43,7 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     Patch(v"1.12.0-DEV.467", # f3561ae5af05713480aa9a8166501449305a0339
         AddLatexSymbols("\\_<" => "˱",
                         "\\_>" => "˲")),
-    Patch(v"1.12.0-DEV.278", #0ac60b736a26f4b92b67edad16f3e90e1eb32cd8
+    Patch(v"1.12.0-DEV.278", # 0ac60b736a26f4b92b67edad16f3e90e1eb32cd8
         AddEmojiSymbols("\\:beans:" => "🫘",
                         "\\:biting_lip:" => "🫦",
                         "\\:bubbles:" => "🫧",

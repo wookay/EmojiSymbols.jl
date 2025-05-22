@@ -1,4 +1,9 @@
+```@raw html
+<!-- generated -->
+```
 # Patches
+
+`REPL_COMPLETIONS_PATCHES` contains the actual patch data, which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
 
 ### v"1.13.0-DEV.595"
 
@@ -246,6 +251,3 @@
 ### v"1.7.0-DEV.849"
 
   * Load2fc32f2ea2
-```@raw html
-<!-- generated -->
-```
