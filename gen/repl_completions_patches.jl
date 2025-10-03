@@ -2,11 +2,13 @@
 
 const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     # v1.13
-    Patch(v"1.13.0-DEV.595", # 229a6984ee142283d81955d8d53d7985fd5736ca
+    Patch(v"1.13.0-DEV.1250", # 0e30e0f39dd92a868373739cf8989c64dd29eaa2    Support superscript small q
+        AddLatexSymbols("\\^q" => "𐞥")),
+    Patch(v"1.13.0-DEV.595",  # 229a6984ee142283d81955d8d53d7985fd5736ca    Rightwards Arrow with Lower Hook
         AddLatexSymbols("\\hookunderrightarrow" => "🢲")),
 
     # v1.12
-    Patch(v"1.12.0-DEV.492", # 6f6bb950b3e7b0a6e77bb11ffd7cc001cb87439d    Music Symbols
+    Patch(v"1.12.0-DEV.492",  # 6f6bb950b3e7b0a6e77bb11ffd7cc001cb87439d    Music Symbols
         AddLatexSymbols("\\flatflat" => "𝄫",
                         "\\sharpsharp" => "𝄪",
                         "\\leftrepeatsign" => "𝄆",
@@ -40,10 +42,10 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
                         "\\note32th" => "𝅘𝅥𝅰",
                         "\\note64th" => "𝅘𝅥𝅱",
                         "\\note128th" => "𝅘𝅥𝅲")),
-    Patch(v"1.12.0-DEV.467", # f3561ae5af05713480aa9a8166501449305a0339
+    Patch(v"1.12.0-DEV.467",  # f3561ae5af05713480aa9a8166501449305a0339
         AddLatexSymbols("\\_<" => "˱",
                         "\\_>" => "˲")),
-    Patch(v"1.12.0-DEV.278", # 0ac60b736a26f4b92b67edad16f3e90e1eb32cd8
+    Patch(v"1.12.0-DEV.278",  # 0ac60b736a26f4b92b67edad16f3e90e1eb32cd8
         AddEmojiSymbols("\\:beans:" => "🫘",
                         "\\:biting_lip:" => "🫦",
                         "\\:bubbles:" => "🫧",
@@ -125,8 +127,8 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
                         "\\stigma" => "ϛ",  # greek small letter stigma
                         "\\koppa" => "ϟ",  # greek small letter koppa
                         "\\sampi" => "ϡ")),  # greek small letter sampi
-  # Patch(v"1.11.0-DEV.656") # 0c4af3288e8a4aab71c39b6ee5174964101e0704    Fix typos
-    Patch(v"1.11.0-DEV.12", # fcb31107a9515dda8b519e126c039c345ef7daf9
+  # Patch(v"1.11.0-DEV.656")  # 0c4af3288e8a4aab71c39b6ee5174964101e0704    Fix typos
+    Patch(v"1.11.0-DEV.12",   # fcb31107a9515dda8b519e126c039c345ef7daf9
         AddLatexSymbols("\\guillemotleft" => "«",
                         "\\guillemotright" => "»")),
 
@@ -134,19 +136,19 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     Patch(v"1.10.0-DEV.1204", # ad939df098a58f38c6a2dc9aec5976f098a5e5e5
         AddLatexSymbols("\\leftarrowless" => "⥷",
                         "\\leftarrowsubset" => "⥺")),
-    Patch(v"1.10.0-DEV.570", # a647575ff68ffec44ef7980545479915fcf3d62e
+    Patch(v"1.10.0-DEV.570",  # a647575ff68ffec44ef7980545479915fcf3d62e
         AddLatexSymbols("\\veedot" => "⟇")),
 
     # v1.9
-    Patch(v"1.9.0-DEV.346", # 315a5ddb46628373b72e1b700d5bd8e35cd78df7
+    Patch(v"1.9.0-DEV.346",   # 315a5ddb46628373b72e1b700d5bd8e35cd78df7
         RemoveLatexSymbols("\\sqspne" => "⋥"),
         AddLatexSymbols("\\sqsupsetneq" => "⋥")),
-    Patch(v"1.9.0-DEV.332", # 559244b383cf1a146f6c8e4ed81b1b746276abe0
+    Patch(v"1.9.0-DEV.332",   # 559244b383cf1a146f6c8e4ed81b1b746276abe0
         AddLatexSymbols("\\neq" => "≠"),
         AddSymbolsLatexCanonical("≠" => "\\ne")),
 
     # v1.7
-    Patch(v"1.7.0-DEV.894", # 4996445df37e526dac2772e333caf82f1ea987f0
+    Patch(v"1.7.0-DEV.894",   # 4996445df37e526dac2772e333caf82f1ea987f0
         AddLatexSymbols("\\Top" => "⫪",
                         "\\Bot" => "⫫",
                         "\\indep" => "⫫",
@@ -154,12 +156,12 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
                         "\\upvDash" => "⫫"),
         AddSymbolsLatexCanonical("⫫" => "\\Bot",
                                  "⫪" => "\\Top")),
-    Patch(v"1.7.0-DEV.893", # b838cdfbb54515f8007a2958ebcdd58b76513db5
+    Patch(v"1.7.0-DEV.893",   # b838cdfbb54515f8007a2958ebcdd58b76513db5
         AddLatexSymbols("\\nand" => "⊼",
                         "\\nor" => "⊽"),
         AddSymbolsLatexCanonical("⊼" => "\\nand",
                                  "⊽" => "\\nor")),
-    Patch(v"1.7.0-DEV.849", # 2fc32f2ea247c0c03ea78b229ff159af84c45fb1
+    Patch(v"1.7.0-DEV.849",   # 2fc32f2ea247c0c03ea78b229ff159af84c45fb1
         Load2fc32f2ea2())
 ])
 
