@@ -1,6 +1,12 @@
 # module EmojiSymbols
 
 const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
+    # v1.14
+     Patch(v"1.14.0-DEV.22",  # ed705d859ab9d2f03d134ee45d9f51ebed300f1a    Add superscript capital C, F, Q
+         AddLatexSymbols("\\^C" => "ꟲ",
+                         "\\^F" => "ꟳ",
+                         "\\^Q" => "ꟴ")),
+
     # v1.13
     Patch(v"1.13.0-DEV.1250", # 0e30e0f39dd92a868373739cf8989c64dd29eaa2    Support superscript small q
         AddLatexSymbols("\\^q" => "𐞥")),

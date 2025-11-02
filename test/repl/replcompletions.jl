@@ -16,6 +16,6 @@ using .Codex: Patch, AddEmojiSymbols, AddLatexSymbols, RemoveLatexSymbols, AddSy
 
 include(normpath(@__DIR__, "../common/routines.jl"))
 
-check_the_patches(!)
+check_the_patches(loaded)
 
 end # module test_repl_replcompletions
