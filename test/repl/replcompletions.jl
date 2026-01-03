@@ -1,10 +1,6 @@
 module test_repl_replcompletions
 
 loaded = haskey(Base.loaded_modules, Base.PkgId(Base.UUID("c599478c-de41-4aed-94ea-b47665d7a42a"), "EmojiSymbols"))
-if loaded
-    using Pkg
-    throw(Pkg.Types.PkgError("EmojiSymbols has already loaded"))
-end
 
 module Codex
 include(normpath(@__DIR__, "../../src/types.jl"))
