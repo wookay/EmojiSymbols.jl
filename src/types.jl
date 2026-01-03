@@ -1,5 +1,7 @@
 # module EmojiSymbols
 
+using LogicalOperators: OR
+
 """
     abstract type AbstractPatchAction end
 """
@@ -64,7 +66,7 @@ AddSymbolsLatexCanonical
     end
 """
 struct Patch
-    version::VersionNumber
+    version::Union{OR{VersionNumber}, VersionNumber}
     actions::Vector{<: AbstractPatchAction}
     function Patch(version, actions...)
         new(version, collect(actions))

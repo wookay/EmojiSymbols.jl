@@ -9,7 +9,11 @@ function patches_to_be_loaded(; down_to::VersionNumber = VERSION,
                                 up_to::VersionNumber   = LATEST_PATCH_VERSION,
                                 patches::Vector{Patch} = REPL_COMPLETIONS_PATCHES)::Vector{Patch}
     filter(patches) do patch
-        down_to < patch.version <= up_to
+        if patch.version isa VersionNumber
+            down_to < patch.version <= up_to
+        else
+            any(ver -> down_to < ver <= up_to, patch.version)
+        end
     end
 end
 

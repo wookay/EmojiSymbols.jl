@@ -1,5 +1,6 @@
 using Test
 using REPL
+using LogicalOperators: OR
 
 const SAMPLE_PATCHES = Patch[
     # v1.14
@@ -10,7 +11,10 @@ const SAMPLE_PATCHES = Patch[
     # v1.13
     Patch(v"1.13.0-DEV.1250", # 0e30e0f39dd92a868373739cf8989c64dd29eaa2    Support superscript small q
         AddLatexSymbols("\\^q" => "𐞥")),
-    Patch(v"1.13.0-DEV.595",  # 229a6984ee142283d81955d8d53d7985fd5736ca   Rightwards Arrow with Lower Hook
+    Patch(
+        OR(v"1.12.3",
+           v"1.13.0-DEV.595"  # 229a6984ee142283d81955d8d53d7985fd5736ca    Rightwards Arrow with Lower Hook
+        ),
         AddLatexSymbols("\\hookunderrightarrow" => "🢲")),
     # v1.12
     Patch(v"1.12.0-DEV.278",  # 0ac60b736a26f4b92b67edad16f3e90e1eb32cd8
@@ -24,7 +28,11 @@ const SAMPLE_PATCHES = Patch[
 ]
 
 function is_past_version(patch::Patch)::Bool
-    VERSION > patch.version
+    if patch.version isa VersionNumber
+        VERSION >= patch.version
+    else
+        any(ver -> VERSION >= ver, patch.version)
+    end
 end
 
 function check_the_patches(loaded::Bool)

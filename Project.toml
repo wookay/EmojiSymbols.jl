@@ -4,13 +4,18 @@ keywords = ["emoji", "latex", "REPL"]
 license = "MIT"
 desc = "additional Emoji, LaTeX Symbols for Julia REPL 🤔"
 authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
-version = "0.1.10"
+version = "0.1.11-DEV"
 
 [deps]
 REPL = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
+LogicalOperators = "6ac76662-4673-4d6a-8390-a82adc3670cf"
+
+[sources]
+LogicalOperators = {url = "https://github.com/wookay/LogicalOperators.jl", rev = "main"}
 
 [compat]
 julia = "1"
+LogicalOperators = "0.1"
 Jive = "0.3"
 
 [extras]
