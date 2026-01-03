@@ -191,8 +191,10 @@
 | `\^=`                        | ⁼       |
 | `\^A`                        | ᴬ       |
 | `\^B`                        | ᴮ       |
+| `\^C`                        | ꟲ       |
 | `\^D`                        | ᴰ       |
 | `\^E`                        | ᴱ       |
+| `\^F`                        | ꟳ       |
 | `\^G`                        | ᴳ       |
 | `\^H`                        | ᴴ       |
 | `\^I`                        | ᴵ       |
@@ -203,6 +205,7 @@
 | `\^N`                        | ᴺ       |
 | `\^O`                        | ᴼ       |
 | `\^P`                        | ᴾ       |
+| `\^Q`                        | ꟴ       |
 | `\^R`                        | ᴿ       |
 | `\^T`                        | ᵀ       |
 | `\^U`                        | ᵁ       |
@@ -234,6 +237,7 @@
 | `\^o`                        | ᵒ       |
 | `\^p`                        | ᵖ       |
 | `\^phi`                      | ᵠ       |
+| `\^q`                        | 𐞥       |
 | `\^r`                        | ʳ       |
 | `\^s`                        | ˢ       |
 | `\^t`                        | ᵗ       |
@@ -4075,6 +4079,10 @@
 <span title="\^uparrow">ꜛ</span>
 <span title="\^downarrow">ꜜ</span>
 <span title="\^&#33;">ꜝ</span>
+<span title="\^C">ꟲ</span>
+<span title="\^F">ꟳ</span>
+<span title="\^Q">ꟴ</span>
+<span title="\^q">𐞥</span>
 <span title="\leftrepeatsign">𝄆</span>
 <span title="\rightrepeatsign">𝄇</span>
 <span title="\dalsegno">𝄉</span>

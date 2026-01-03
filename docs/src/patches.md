@@ -5,12 +5,30 @@
 
 `REPL_COMPLETIONS_PATCHES` contains the actual patch data, which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
 
-### v"1.13.0-DEV.595"
+### v"1.14.0-DEV.22"
 
   * AddLatexSymbols
 
 ```julia
-"\\hookunderrightarrow" => "\U1f8b2"
+"\\^C" => "ꟲ"
+"\\^F" => "ꟳ"
+"\\^Q" => "ꟴ"
+```
+
+### v"1.13.0-DEV.1250"
+
+  * AddLatexSymbols
+
+```julia
+"\\^q" => "𐞥"
+```
+
+### v"1.12.3", v"1.13.0-DEV.595"
+
+  * AddLatexSymbols
+
+```julia
+"\\hookunderrightarrow" => "🢲"
 ```
 
 ### v"1.12.0-DEV.492"

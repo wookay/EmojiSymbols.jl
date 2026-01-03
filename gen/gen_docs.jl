@@ -39,7 +39,11 @@ end
 function gen_patches(title::String)
     contents = []
     for patch in EmojiSymbols.REPL_COMPLETIONS_PATCHES
-        push!(contents, Header{3}(patch.version))
+        if patch.version isa VersionNumber
+            push!(contents, Header{3}(patch.version))
+        else
+            push!(contents, Header{3}(join(map(repr, patch.version), ", ")))
+        end
         for action in patch.actions
             push!(contents, List(Paragraph((String ∘ nameof ∘ typeof)(action))))
             if action isa EmojiSymbols.Load2fc32f2ea2
