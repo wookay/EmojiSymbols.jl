@@ -17,11 +17,13 @@ LogicalOperators = {url = "https://github.com/wookay/LogicalOperators.jl", rev =
 julia = "1"
 LogicalOperators = "0.1"
 Jive = "0.3"
+Glyphy = "1.8"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+Glyphy = "e3b492bb-b251-48f2-9293-5b5772365208"
 
 [targets]
-test = ["Test", "Pkg", "Jive"]
+test = ["Test", "Pkg", "Jive", "Glyphy"]
