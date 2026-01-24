@@ -31,6 +31,9 @@ julia> '🤔'
 '🤔': Unicode U+1F914 (category So: Symbol, other), input as \:thinking_face:<tab>
 ```
 
+See also [Glyphy.jl](https://github.com/cormullion/Glyphy.jl).
+
+
 [docs-latest-img]: https://img.shields.io/badge/docs-latest-blue.svg
 [docs-latest-url]: https://wookay.github.io/docs/EmojiSymbols.jl/
 
