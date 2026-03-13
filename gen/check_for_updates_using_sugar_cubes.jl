@@ -31,10 +31,18 @@ checks_has_diff(
     "src/REPL.jl",
     :(if VERSION >= v"1.13.0-DEV.620" elseif VERSION >= v"1.11.0" function show_limited(io::IO, mime::MIME, x) end end)
 )
+
 checks_has_diff(
     "sources/stdlib/REPL/src/REPL.jl",
     :(module REPL function display(d::REPLDisplay, mime::MIME"text/plain", x) end end),
     "src/REPL.jl",
     :(if VERSION >= v"1.13.0-DEV.620" elseif VERSION >= v"1.11.0" function display(d::REPLDisplay, mime::MIME"text/plain", x::AbstractChar) end end)
 )
-end
+
+checks_has_diff(
+    "sources/stdlib/REPL/src/REPL.jl",
+    :(module REPL function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar) end end),
+    "src/REPL.jl",
+    :(if v"1.13.0-DEV.620" > VERSION >= v"1.11.0" function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar) end end)
+)
+end # if
