@@ -18,6 +18,19 @@ elseif VERSION >= v"1.11.0"
 function show_repl end
 using .REPL: REPLDisplay, LineEditREPL, LineEdit, with_repl_linfo, answer_color
 import Base: display
+function show_limited(io::IO, mime::MIME, x)
+    try
+        # We wrap in a LimitIO to limit the amount of printing.
+        # We unpack `IOContext`s, since we will pass the properties on the outside.
+        inner = io isa IOContext ? io.io : io
+        wrapped_limiter = IOContext(LimitIO(inner, SHOW_MAXIMUM_BYTES), io)
+        # `show_repl` to allow the hook with special syntax highlighting
+        show_repl(wrapped_limiter, mime, x)
+    catch e
+        e isa LimitIOException || rethrow()
+        printstyled(io, """…[printing stopped after displaying $(Base.format_bytes(e.maxbytes)); call `show(stdout, MIME"text/plain"(), ans)` to print without truncation]"""; color=:light_yellow, bold=true)
+    end
+end
 function display(d::REPLDisplay, mime::MIME"text/plain", x::AbstractChar)
     x = Ref{Any}(x)
     with_repl_linfo(d.repl) do io
@@ -34,7 +47,7 @@ function display(d::REPLDisplay, mime::MIME"text/plain", x::AbstractChar)
             # this can override the :limit property set initially
             io = foldl(IOContext, d.repl.options.iocontext, init=io)
         end
-        show_repl(io, mime, x[])
+        show_limited(io, mime, x[])
         println(io)
     end
     return nothing
