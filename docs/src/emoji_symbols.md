@@ -1284,8 +1284,8 @@
 <span title="\:cloud:">☁</span>
 <span title="\:phone:">☎</span>
 <span title="\:ballot_box_with_check:">☑</span>
-<span title="\:umbrella_with_rain_drops:">☔</span>
 <span title="\:umbrella:">☔</span>
+<span title="\:umbrella_with_rain_drops:">☔</span>
 <span title="\:coffee:">☕</span>
 <span title="\:point_up:">☝</span>
 <span title="\:relaxed:">☺</span>
@@ -1683,7 +1683,7 @@
 <span title="\:facepunch:">👊</span>
 <span title="\:wave:">👋</span>
 <span title="\:ok_hand:">👌</span>
-<span title="\:&#43;1:">👍</span>
+<span title="\:+1:">👍</span>
 <span title="\:-1:">👎</span>
 <span title="\:clap:">👏</span>
 <span title="\:open_hands:">👐</span>
@@ -1713,8 +1713,8 @@
 <span title="\:man:">👨</span>
 <span title="\:woman:">👩</span>
 <span title="\:family:">👪</span>
-<span title="\:couple:">👫</span>
 <span title="\:man_and_woman_holding_hands:">👫</span>
+<span title="\:couple:">👫</span>
 <span title="\:two_men_holding_hands:">👬</span>
 <span title="\:two_women_holding_hands:">👭</span>
 <span title="\:cop:">👮</span>

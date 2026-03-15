@@ -3,7 +3,8 @@
 ```
 # Patches
 
-`REPL_COMPLETIONS_PATCHES` contains the actual patch data, which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
+`REPL_COMPLETIONS_PATCHES` contains the actual patch data,
+which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
 
 ### v"1.14.0-DEV.22"
 
