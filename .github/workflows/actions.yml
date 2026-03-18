@@ -55,7 +55,7 @@ jobs:
         run: |
           git clone --depth=1 --filter=blob:none --sparse https://github.com/JuliaLang/julia sources
           cd sources/
-          git sparse-checkout set JuliaSyntax stdlib/REPL
+          git sparse-checkout set JuliaSyntax stdlib/REPL/src
           cd ../
 
           git clone --depth=1 https://github.com/wookay/SugarCubes.jl SugarCubes.jl
