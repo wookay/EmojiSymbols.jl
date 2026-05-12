@@ -10,7 +10,7 @@ function check_the_code_block_diff(src_path::String,
                                    src_signature::Expr,
                                    dest_path::String,
                                    dest_signature::Expr)
-    printstyled(stdout, "check_the_code_block_diff", color = :blue)
+    printstyled(stdout, "✔ ", color = :blue)
     print(stdout, " ", basename(src_path), " ")
     src_filepath = normpath(@__DIR__, "..", src_path)
     dest_filepath = normpath(@__DIR__, "..", dest_path)
