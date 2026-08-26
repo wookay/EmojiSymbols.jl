@@ -1,7 +1,19 @@
 ```@raw html
 <!-- generated -->
 ```
+
 # LaTeX symbols
+
+```@contents
+Pages = ["latex_symbols.md"]
+Depth = 2:2
+```
+
+```@index
+Pages = ["latex_symbols.md"]
+```
+
+## short names
 
 | short name                   | unicode |
 |:---------------------------- |:------- |
@@ -2558,6 +2570,8 @@
 | `\yen`                       | ¥       |
 | `\yogh`                      | ʒ       |
 | `\zeta`                      | ζ       |
+
+## characters
 
 ```@raw html
 <span title="\exclamdown">¡</span>

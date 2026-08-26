@@ -18,8 +18,9 @@ function generate_markdown(title::String, dict_data::Dict{String, String})
     for (k, v) in sort(collect(dict_data), by=last)
         push!(spans, tag_span(k, v))
     end
-    MD(Header{1}(title),
+    MD(Header{2}("short names"),
        Table(table_data, align),
+       Header{2}("characters"),
        Code("@raw html", join(spans, "\n")))
 end
 
@@ -30,19 +31,32 @@ const generated_comments = """
 """
 
 function write_doc(name::Symbol, title::String)
-    filepath = normpath(@__DIR__, "../docs/src/$name.md")
+    filename = string(name, ".md")
+    filepath = normpath(@__DIR__, "../docs/src/$filename")
+    top_doc = """
+# $title
+
+```@contents
+Pages = ["$filename"]
+Depth = 2:2
+```
+
+```@index
+Pages = ["$filename"]
+```
+"""
     md = generate_markdown(title, getfield(REPL.REPLCompletions, name))
     @info "save $title" filepath
-    write(filepath, string(generated_comments, md))
+    write(filepath, string(generated_comments, "\n", top_doc, "\n", md))
 end
 
-function gen_patches(title::String)
+function gen_patches()
     contents = []
     for patch in EmojiSymbols.REPL_COMPLETIONS_PATCHES
         if patch.version isa VersionNumber
-            push!(contents, Header{3}(patch.version))
+            push!(contents, Header{2}(patch.version))
         else
-            push!(contents, Header{3}(join(map(repr, patch.version), ", ")))
+            push!(contents, Header{2}(join(map(repr, patch.version), ", ")))
         end
         for action in patch.actions
             push!(contents, List(Paragraph((String ∘ nameof ∘ typeof)(action))))
@@ -52,18 +66,30 @@ function gen_patches(title::String)
             end
         end
     end
-    p = md"""
-`REPL_COMPLETIONS_PATCHES` contains the actual patch data,
-which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
-"""
-    MD(Header{1}(title), p, contents...)
+    MD(contents...)
 end
 
 function write_doc_patches(name::Symbol, title::String)
-    filepath = normpath(@__DIR__, "../docs/src/$name.md")
-    md = gen_patches(title)
+    filename = string(name, ".md")
+    filepath = normpath(@__DIR__, "../docs/src/$filename")
+    top_doc = """
+# $title
+
+`REPL_COMPLETIONS_PATCHES` contains the actual patch data,
+which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
+
+```@contents
+Pages = ["$filename"]
+Depth = 2:2
+```
+
+```@index
+Pages = ["$filename"]
+```
+"""
+    md = gen_patches()
     @info "save $title" filepath
-    write(filepath, string(generated_comments, md))
+    write(filepath, string(generated_comments, "\n", top_doc, "\n", md))
 end
 
 if true # false

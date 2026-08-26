@@ -1,12 +1,22 @@
 ```@raw html
 <!-- generated -->
 ```
+
 # Patches
 
 `REPL_COMPLETIONS_PATCHES` contains the actual patch data,
 which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/EmojiSymbols.jl/blob/master/gen/repl_completions_patches.jl)
 
-### v"1.14.0-DEV.22"
+```@contents
+Pages = ["patches.md"]
+Depth = 2:2
+```
+
+```@index
+Pages = ["patches.md"]
+```
+
+## v"1.14.0-DEV.22"
 
   * AddLatexSymbols
 
@@ -16,7 +26,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\^Q" => "ꟴ"
 ```
 
-### v"1.13.0-DEV.1250"
+## v"1.13.0-DEV.1250"
 
   * AddLatexSymbols
 
@@ -24,7 +34,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\^q" => "𐞥"
 ```
 
-### v"1.12.3", v"1.13.0-DEV.595"
+## v"1.12.3", v"1.13.0-DEV.595"
 
   * AddLatexSymbols
 
@@ -32,7 +42,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\hookunderrightarrow" => "🢲"
 ```
 
-### v"1.12.0-DEV.492"
+## v"1.12.0-DEV.492"
 
   * AddLatexSymbols
 
@@ -72,7 +82,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\note128th" => "𝅘𝅥𝅲"
 ```
 
-### v"1.12.0-DEV.467"
+## v"1.12.0-DEV.467"
 
   * AddLatexSymbols
 
@@ -81,7 +91,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\_>" => "˲"
 ```
 
-### v"1.12.0-DEV.278"
+## v"1.12.0-DEV.278"
 
   * AddEmojiSymbols
 
@@ -145,7 +155,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\:x-ray:" => "🩻"
 ```
 
-### v"1.11.0-DEV.1103"
+## v"1.11.0-DEV.1103"
 
   * RemoveLatexSymbols
 
@@ -178,7 +188,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\sampi" => "ϡ"
 ```
 
-### v"1.11.0-DEV.12"
+## v"1.11.0-DEV.12"
 
   * AddLatexSymbols
 
@@ -187,7 +197,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\guillemotright" => "»"
 ```
 
-### v"1.10.0-DEV.1204"
+## v"1.10.0-DEV.1204"
 
   * AddLatexSymbols
 
@@ -196,7 +206,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\leftarrowsubset" => "⥺"
 ```
 
-### v"1.10.0-DEV.570"
+## v"1.10.0-DEV.570"
 
   * AddLatexSymbols
 
@@ -204,7 +214,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\veedot" => "⟇"
 ```
 
-### v"1.9.0-DEV.346"
+## v"1.9.0-DEV.346"
 
   * RemoveLatexSymbols
 
@@ -218,7 +228,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "\\sqsupsetneq" => "⋥"
 ```
 
-### v"1.9.0-DEV.332"
+## v"1.9.0-DEV.332"
 
   * AddLatexSymbols
 
@@ -232,7 +242,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "≠" => "\\ne"
 ```
 
-### v"1.7.0-DEV.894"
+## v"1.7.0-DEV.894"
 
   * AddLatexSymbols
 
@@ -251,7 +261,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "⫪" => "\\Top"
 ```
 
-### v"1.7.0-DEV.893"
+## v"1.7.0-DEV.893"
 
   * AddLatexSymbols
 
@@ -267,6 +277,6 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 "⊽" => "\\nor"
 ```
 
-### v"1.7.0-DEV.849"
+## v"1.7.0-DEV.849"
 
   * Load2fc32f2ea2

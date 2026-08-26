@@ -1,7 +1,19 @@
 ```@raw html
 <!-- generated -->
 ```
+
 # Emoji symbols
+
+```@contents
+Pages = ["emoji_symbols.md"]
+Depth = 2:2
+```
+
+```@index
+Pages = ["emoji_symbols.md"]
+```
+
+## short names
 
 | short name                                    | unicode |
 |:--------------------------------------------- |:------- |
@@ -1247,6 +1259,8 @@
 | `\:zipper_mouth_face:`                        | 🤐       |
 | `\:zombie:`                                   | 🧟       |
 | `\:zzz:`                                      | 💤       |
+
+## characters
 
 ```@raw html
 <span title="\:copyright:">©</span>

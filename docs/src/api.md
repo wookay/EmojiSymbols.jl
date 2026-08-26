@@ -1,10 +1,15 @@
-### functions
+```@contents
+Pages = ["api.md"]
+Depth = 2:2
+```
+
+## functions
 ```@docs
 patches_to_be_loaded
 apply_patches_to_repl_completions
 ```
 
-### types
+## types
 ```@docs
 Patch
 ```
