@@ -1266,6 +1266,7 @@ Pages = ["latex_symbols.md"]
 | `\equiv`                     | ≡       |
 | `\equivDD`                   | ⩸       |
 | `\eqvparsl`                  | ⧥       |
+| `\escape`                    | ⎋       |
 | `\esh`                       | ʃ       |
 | `\eta`                       | η       |
 | `\eth`                       | ð       |
@@ -2565,6 +2566,7 @@ Pages = ["latex_symbols.md"]
 | `\wp`                        | ℘       |
 | `\wr`                        | ≀       |
 | `\xi`                        | ξ       |
+| `\xmark`                     | ✗       |
 | `\xor`                       | ⊻       |
 | `\xrat`                      | ℞       |
 | `\yen`                       | ¥       |
@@ -2876,11 +2878,11 @@ Pages = ["latex_symbols.md"]
 <span title="\^7">⁷</span>
 <span title="\^8">⁸</span>
 <span title="\^9">⁹</span>
-<span title="\^+">⁺</span>
+<span title="\^&#43;">⁺</span>
 <span title="\^-">⁻</span>
-<span title="\^=">⁼</span>
-<span title="\^(">⁽</span>
-<span title="\^)">⁾</span>
+<span title="\^&#61;">⁼</span>
+<span title="\^&#40;">⁽</span>
+<span title="\^&#41;">⁾</span>
 <span title="\^n">ⁿ</span>
 <span title="\_0">₀</span>
 <span title="\_1">₁</span>
@@ -2892,11 +2894,11 @@ Pages = ["latex_symbols.md"]
 <span title="\_7">₇</span>
 <span title="\_8">₈</span>
 <span title="\_9">₉</span>
-<span title="\_+">₊</span>
+<span title="\_&#43;">₊</span>
 <span title="\_-">₋</span>
-<span title="\_=">₌</span>
-<span title="\_(">₍</span>
-<span title="\_)">₎</span>
+<span title="\_&#61;">₌</span>
+<span title="\_&#40;">₍</span>
+<span title="\_&#41;">₎</span>
 <span title="\_a">ₐ</span>
 <span title="\_e">ₑ</span>
 <span title="\_o">ₒ</span>
@@ -3415,6 +3417,7 @@ Pages = ["latex_symbols.md"]
 <span title="\notbackslash">⍀</span>
 <span title="\boxupcaret">⍓</span>
 <span title="\boxquestion">⍰</span>
+<span title="\escape">⎋</span>
 <span title="\hexagon">⎔</span>
 <span title="\dlcorn">⎣</span>
 <span title="\lmoustache">⎰</span>
@@ -3606,6 +3609,7 @@ Pages = ["latex_symbols.md"]
 <span title="\mdsmwhtcircle">⚬</span>
 <span title="\neuter">⚲</span>
 <span title="\checkmark">✓</span>
+<span title="\xmark">✗</span>
 <span title="\maltese">✠</span>
 <span title="\circledstar">✪</span>
 <span title="\varstar">✶</span>
@@ -4092,7 +4096,7 @@ Pages = ["latex_symbols.md"]
 <span title="\postalmark">〒</span>
 <span title="\^uparrow">ꜛ</span>
 <span title="\^downarrow">ꜜ</span>
-<span title="\^!">ꜝ</span>
+<span title="\^&#33;">ꜝ</span>
 <span title="\^C">ꟲ</span>
 <span title="\^F">ꟳ</span>
 <span title="\^Q">ꟴ</span>

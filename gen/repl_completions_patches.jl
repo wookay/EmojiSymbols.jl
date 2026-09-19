@@ -2,6 +2,9 @@
 
 const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     # v1.14
+    Patch(v"1.14.0-DEV.3246", # 289916806447593343fb41475bb40387e87552d2    Support `\escape` for `⎋` and `\xmark` for `✗`
+         AddLatexSymbols("\\escape" => "⎋",
+                         "\\xmark" => "✗")),
      Patch(v"1.14.0-DEV.22",  # ed705d859ab9d2f03d134ee45d9f51ebed300f1a    Add superscript capital C, F, Q
          AddLatexSymbols("\\^C" => "ꟲ",
                          "\\^F" => "ꟳ",

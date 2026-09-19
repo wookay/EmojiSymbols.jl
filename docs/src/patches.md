@@ -16,6 +16,15 @@ Depth = 2:2
 Pages = ["patches.md"]
 ```
 
+## v"1.14.0-DEV.3246"
+
+  * AddLatexSymbols
+
+```julia
+"\\escape" => "⎋"
+"\\xmark" => "✗"
+```
+
 ## v"1.14.0-DEV.22"
 
   * AddLatexSymbols
