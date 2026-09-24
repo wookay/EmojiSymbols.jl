@@ -55,8 +55,10 @@ function apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module):
                 for (k, v) in action.symbol_pairs
                     if Ta === AddEmojiSymbols
                         setindex!(mod.emoji_symbols, v, k)
+                        REPL.symbols_latex[v] = k
                     elseif Ta === AddLatexSymbols
                         setindex!(mod.latex_symbols, v, k)
+                        REPL.symbols_latex[v] = k
                     elseif Ta === RemoveLatexSymbols
                         delete!(mod.latex_symbols, k)
                     elseif Ta === AddSymbolsLatexCanonical
