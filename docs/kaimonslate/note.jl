@@ -10,6 +10,9 @@ try; import KaimonSlate; catch; error("This is a Kaimon Slate notebook — runni
 using Pkg
 Pkg.status("EmojiSymbols")
 
+#%% code id=ac6ee0
+VERSION
+
 #%% code id=ab784d
 using EmojiSymbols
 
@@ -17,6 +20,10 @@ using EmojiSymbols
 # \hookunderrightarrow <tab>
 # 🢲
 '🢲'
+
+#%% code id=e45c85
+using REPL
+REPL.show_repl(stdout, MIME("text/plain"), '🢲')
 
 # ╔═╡ Slate.config · per-notebook settings (Settings panel)
 #   docid = a55773c2-e124-45d6-b8b6-8d8a5dde3b82
