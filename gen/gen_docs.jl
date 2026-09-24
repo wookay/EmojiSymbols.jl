@@ -38,7 +38,7 @@ function write_doc(name::Symbol, title::String)
 
 ```@contents
 Pages = ["$filename"]
-Depth = 2:2
+Depth = 2:3
 ```
 
 ```@index
@@ -53,11 +53,29 @@ end
 function gen_patches()
     contents = []
     for patch in EmojiSymbols.REPL_COMPLETIONS_PATCHES
-        if patch.version isa VersionNumber
-            push!(contents, Header{2}(patch.version))
-        else
-            push!(contents, Header{2}(join(map(repr, patch.version), ", ")))
+        vers = patch.version isa VersionNumber ? patch.version : join(map(repr, patch.version), ", ")
+        kind = nothing
+        for action in patch.actions
+            if action isa EmojiSymbols.AddEmojiSymbols
+                kind = "Emoji"
+                break
+            elseif typeof(action) in (EmojiSymbols.AddLatexSymbols, EmojiSymbols.RemoveLatexSymbols, EmojiSymbols.AddSymbolsLatexCanonical)
+                kind = "LaTeX"
+                break
+            end
         end
+        if kind === nothing
+            h3_text = string("`", vers, "`")
+        else
+            h3_text = string("`", vers, " ", kind, "`")
+        end
+        push!(contents, Header{3}(h3_text))
+        push!(contents, List(Paragraph(
+            string(
+                "julia commit ",
+                "[", patch.commit, "](", "https://github.com/JuliaLang/julia/commit/", patch.commit, ")"
+            )
+        )))
         for action in patch.actions
             push!(contents, List(Paragraph((String ∘ nameof ∘ typeof)(action))))
             if action isa EmojiSymbols.Load2fc32f2ea2
@@ -80,7 +98,7 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 
 ```@contents
 Pages = ["$filename"]
-Depth = 2:2
+Depth = 2:3
 ```
 
 ```@index

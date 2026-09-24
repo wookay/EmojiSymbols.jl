@@ -62,14 +62,16 @@ AddSymbolsLatexCanonical
 """
     struct Patch
         version::VersionNumber
+        commit::String
         actions::Vector{<: AbstractPatchAction}
     end
 """
 struct Patch
     version::Union{OR{VersionNumber}, VersionNumber}
+    commit::String
     actions::Vector{<: AbstractPatchAction}
-    function Patch(version, actions...)
-        new(version, collect(actions))
+    function Patch(version, commit, actions...)
+        new(version, commit, collect(actions))
     end
 end
 

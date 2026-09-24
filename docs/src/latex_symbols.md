@@ -6,7 +6,7 @@
 
 ```@contents
 Pages = ["latex_symbols.md"]
-Depth = 2:2
+Depth = 2:3
 ```
 
 ```@index

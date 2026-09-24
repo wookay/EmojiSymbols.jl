@@ -9,14 +9,16 @@ which defined in [`gen/repl_completions_patches.jl`](https://github.com/wookay/E
 
 ```@contents
 Pages = ["patches.md"]
-Depth = 2:2
+Depth = 2:3
 ```
 
 ```@index
 Pages = ["patches.md"]
 ```
 
-## v"1.14.0-DEV.3246"
+### `1.14.0-DEV.3246 LaTeX`
+
+  * julia commit [2899168064](https://github.com/JuliaLang/julia/commit/2899168064)
 
   * AddLatexSymbols
 
@@ -25,7 +27,9 @@ Pages = ["patches.md"]
 "\\xmark" => "✗"
 ```
 
-## v"1.14.0-DEV.22"
+### `1.14.0-DEV.22 LaTeX`
+
+  * julia commit [ed705d859a](https://github.com/JuliaLang/julia/commit/ed705d859a)
 
   * AddLatexSymbols
 
@@ -35,7 +39,9 @@ Pages = ["patches.md"]
 "\\^Q" => "ꟴ"
 ```
 
-## v"1.13.0-DEV.1250"
+### `1.13.0-DEV.1250 LaTeX`
+
+  * julia commit [0e30e0f39d](https://github.com/JuliaLang/julia/commit/0e30e0f39d)
 
   * AddLatexSymbols
 
@@ -43,7 +49,9 @@ Pages = ["patches.md"]
 "\\^q" => "𐞥"
 ```
 
-## v"1.12.3", v"1.13.0-DEV.595"
+### `v"1.12.3", v"1.13.0-DEV.595" LaTeX`
+
+  * julia commit [229a6984ee](https://github.com/JuliaLang/julia/commit/229a6984ee)
 
   * AddLatexSymbols
 
@@ -51,7 +59,9 @@ Pages = ["patches.md"]
 "\\hookunderrightarrow" => "🢲"
 ```
 
-## v"1.12.0-DEV.492"
+### `1.12.0-DEV.492 LaTeX`
+
+  * julia commit [6f6bb950b3](https://github.com/JuliaLang/julia/commit/6f6bb950b3)
 
   * AddLatexSymbols
 
@@ -91,7 +101,9 @@ Pages = ["patches.md"]
 "\\note128th" => "𝅘𝅥𝅲"
 ```
 
-## v"1.12.0-DEV.467"
+### `1.12.0-DEV.467 LaTeX`
+
+  * julia commit [f3561ae5af](https://github.com/JuliaLang/julia/commit/f3561ae5af)
 
   * AddLatexSymbols
 
@@ -100,7 +112,9 @@ Pages = ["patches.md"]
 "\\_>" => "˲"
 ```
 
-## v"1.12.0-DEV.278"
+### `1.12.0-DEV.278 Emoji`
+
+  * julia commit [0ac60b736a](https://github.com/JuliaLang/julia/commit/0ac60b736a)
 
   * AddEmojiSymbols
 
@@ -164,7 +178,9 @@ Pages = ["patches.md"]
 "\\:x-ray:" => "🩻"
 ```
 
-## v"1.11.0-DEV.1103"
+### `1.11.0-DEV.1103 LaTeX`
+
+  * julia commit [5e4e7fa153](https://github.com/JuliaLang/julia/commit/5e4e7fa153)
 
   * RemoveLatexSymbols
 
@@ -197,7 +213,9 @@ Pages = ["patches.md"]
 "\\sampi" => "ϡ"
 ```
 
-## v"1.11.0-DEV.12"
+### `1.11.0-DEV.12 LaTeX`
+
+  * julia commit [fcb31107a9](https://github.com/JuliaLang/julia/commit/fcb31107a9)
 
   * AddLatexSymbols
 
@@ -206,7 +224,9 @@ Pages = ["patches.md"]
 "\\guillemotright" => "»"
 ```
 
-## v"1.10.0-DEV.1204"
+### `1.10.0-DEV.1204 LaTeX`
+
+  * julia commit [ad939df098](https://github.com/JuliaLang/julia/commit/ad939df098)
 
   * AddLatexSymbols
 
@@ -215,7 +235,9 @@ Pages = ["patches.md"]
 "\\leftarrowsubset" => "⥺"
 ```
 
-## v"1.10.0-DEV.570"
+### `1.10.0-DEV.570 LaTeX`
+
+  * julia commit [a647575ff6](https://github.com/JuliaLang/julia/commit/a647575ff6)
 
   * AddLatexSymbols
 
@@ -223,7 +245,9 @@ Pages = ["patches.md"]
 "\\veedot" => "⟇"
 ```
 
-## v"1.9.0-DEV.346"
+### `1.9.0-DEV.346 LaTeX`
+
+  * julia commit [315a5ddb46](https://github.com/JuliaLang/julia/commit/315a5ddb46)
 
   * RemoveLatexSymbols
 
@@ -237,7 +261,9 @@ Pages = ["patches.md"]
 "\\sqsupsetneq" => "⋥"
 ```
 
-## v"1.9.0-DEV.332"
+### `1.9.0-DEV.332 LaTeX`
+
+  * julia commit [559244b383](https://github.com/JuliaLang/julia/commit/559244b383)
 
   * AddLatexSymbols
 
@@ -251,7 +277,9 @@ Pages = ["patches.md"]
 "≠" => "\\ne"
 ```
 
-## v"1.7.0-DEV.894"
+### `1.7.0-DEV.894 LaTeX`
+
+  * julia commit [4996445df3](https://github.com/JuliaLang/julia/commit/4996445df3)
 
   * AddLatexSymbols
 
@@ -270,7 +298,9 @@ Pages = ["patches.md"]
 "⫪" => "\\Top"
 ```
 
-## v"1.7.0-DEV.893"
+### `1.7.0-DEV.893 LaTeX`
+
+  * julia commit [b838cdfbb5](https://github.com/JuliaLang/julia/commit/b838cdfbb5)
 
   * AddLatexSymbols
 
@@ -286,6 +316,8 @@ Pages = ["patches.md"]
 "⊽" => "\\nor"
 ```
 
-## v"1.7.0-DEV.849"
+### `1.7.0-DEV.849`
+
+  * julia commit [2fc32f2ea2](https://github.com/JuliaLang/julia/commit/2fc32f2ea2)
 
   * Load2fc32f2ea2
