@@ -17,9 +17,9 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
         "0e30e0f39d",
         AddLatexSymbols("\\^q" => "𐞥")),
     Patch(
-        OR(v"1.12.3",
+        OR([v"1.12.3",
            v"1.13.0-DEV.595"  # 229a6984ee142283d81955d8d53d7985fd5736ca    Rightwards Arrow with Lower Hook
-        ),
+        ]),
         "229a6984ee",
         AddLatexSymbols("\\hookunderrightarrow" => "🢲")),
 

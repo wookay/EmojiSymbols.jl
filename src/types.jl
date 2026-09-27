@@ -1,6 +1,6 @@
 # module EmojiSymbols
 
-using LogicalOperators: OR
+const OR = Vector
 
 """
     abstract type AbstractPatchAction end
