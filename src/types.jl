@@ -7,9 +7,20 @@ const OR = Vector
 """
 abstract type AbstractPatchAction end
 
-for action in (:Load_2fc32f2ea2,
-               :Load_a966e11862,
-               :AddEmojiSymbols,
+"""
+    struct LoadCommit <: AbstractPatchAction
+        commit::String
+        version::VersionNumber
+    end
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+struct LoadCommit <: AbstractPatchAction
+    commit::String
+    version::VersionNumber
+end
+
+for action in (:AddEmojiSymbols,
                :RemoveEmojiSymbols,
                :AddLatexSymbols,
                :RemoveLatexSymbols,
@@ -24,20 +35,6 @@ for action in (:Load_2fc32f2ea2,
     end
     Core.eval(@__MODULE__, expr)
 end
-
-"""
-    struct Load_2fc32f2ea2 <: AbstractPatchAction
-
-used in [`apply_patches_to_repl_completions`](@ref)
-"""
-Load_2fc32f2ea2
-
-"""
-    struct Load_a966e11862 <: AbstractPatchAction
-
-used in [`apply_patches_to_repl_completions`](@ref)
-"""
-Load_a966e11862
 
 """
     struct AddEmojiSymbols <: AbstractPatchAction

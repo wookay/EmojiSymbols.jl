@@ -4,7 +4,7 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     # v1.14
     Patch(v"1.14.0-DEV.3371", # a966e1186293f0a5fde44ca4823762ced1fa961e    new emoji completions!
         "a966e11862",
-        Load_a966e11862()),
+        LoadCommit("a966e11862", v"1.14.0-DEV.3371")),
     Patch(v"1.14.0-DEV.3246", # 289916806447593343fb41475bb40387e87552d2    Support `\escape` for `⎋` and `\xmark` for `✗`
         "2899168064",
         AddLatexSymbols("\\escape" => "⎋",
@@ -193,7 +193,7 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
                                  "⊽" => "\\nor")),
     Patch(v"1.7.0-DEV.849",   # 2fc32f2ea247c0c03ea78b229ff159af84c45fb1
         "2fc32f2ea2",
-        Load_2fc32f2ea2())
+        LoadCommit("2fc32f2ea2", v"1.7.0-DEV.849"))
 ])
 
 # LATEST_PATCH_VERSION::VersionNumber

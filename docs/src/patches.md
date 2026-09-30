@@ -16,11 +16,11 @@ Depth = 2:3
 Pages = ["patches.md"]
 ```
 
-### `1.14.0-DEV.3371`
+### `1.14.0-DEV.3371 Commit`
 
   * julia commit [a966e11862](https://github.com/JuliaLang/julia/commit/a966e11862)
 
-  * Load_a966e11862
+  * LoadCommit
 
 ### `1.14.0-DEV.3246 LaTeX`
 
@@ -322,8 +322,8 @@ Pages = ["patches.md"]
 "⊽" => "\\nor"
 ```
 
-### `1.7.0-DEV.849`
+### `1.7.0-DEV.849 Commit`
 
   * julia commit [2fc32f2ea2](https://github.com/JuliaLang/julia/commit/2fc32f2ea2)
 
-  * Load_2fc32f2ea2
+  * LoadCommit

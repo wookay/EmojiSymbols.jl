@@ -1,4 +1,10 @@
 using EmojiSymbols
+using .EmojiSymbols: LoadCommit,
+                     AddEmojiSymbols,
+                     RemoveEmojiSymbols,
+                     AddLatexSymbols,
+                     RemoveLatexSymbols,
+                     AddSymbolsLatexCanonical
 using REPL
 using Markdown: MD, Header, Table, Code, List, Paragraph, htmlesc, @md_str
 
@@ -56,11 +62,17 @@ function gen_patches()
         vers = patch.version isa VersionNumber ? patch.version : join(map(repr, patch.version), ", ")
         kind = nothing
         for action in patch.actions
-            if action isa EmojiSymbols.AddEmojiSymbols
+            Ta = typeof(action)
+            if Ta === LoadCommit
+                kind = "Commit"
+                break
+            elseif Ta in (AddEmojiSymbols, RemoveEmojiSymbols)
                 kind = "Emoji"
                 break
-            elseif typeof(action) in (EmojiSymbols.AddLatexSymbols, EmojiSymbols.RemoveLatexSymbols, EmojiSymbols.AddSymbolsLatexCanonical)
+            elseif Ta in (AddLatexSymbols, RemoveLatexSymbols, AddSymbolsLatexCanonical)
                 kind = "LaTeX"
+                break
+            else
                 break
             end
         end
@@ -78,8 +90,7 @@ function gen_patches()
         )))
         for action in patch.actions
             push!(contents, List(Paragraph((String ∘ nameof ∘ typeof)(action))))
-            if action isa EmojiSymbols.Load_2fc32f2ea2
-            elseif action isa EmojiSymbols.Load_a966e11862
+            if action isa LoadCommit
             else
                 push!(contents, Code("julia", join(action.symbol_pairs, "\n")))
             end

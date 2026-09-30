@@ -15,12 +15,11 @@ Patch
 ```
 
 ```@docs
-AbstractPatchAction
-Load_2fc32f2ea2
-Load_a966e11862
-AddEmojiSymbols
-RemoveEmojiSymbols
-AddLatexSymbols
-RemoveLatexSymbols
-AddSymbolsLatexCanonical
+EmojiSymbols.AbstractPatchAction
+EmojiSymbols.LoadCommit
+EmojiSymbols.AddEmojiSymbols
+EmojiSymbols.RemoveEmojiSymbols
+EmojiSymbols.AddLatexSymbols
+EmojiSymbols.RemoveLatexSymbols
+EmojiSymbols.AddSymbolsLatexCanonical
 ```
