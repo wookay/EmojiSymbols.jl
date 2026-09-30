@@ -1145,8 +1145,12 @@ Pages = ["latex_symbols.md"]
 | `\curlyeqsucc`               | ⋟       |
 | `\curlyvee`                  | ⋎       |
 | `\curlywedge`                | ⋏       |
+| `\curvearrowdownleft`        | ⤶       |
+| `\curvearrowdownright`       | ⤷       |
 | `\curvearrowleft`            | ↶       |
 | `\curvearrowright`           | ↷       |
+| `\curvearrowrightdown`       | ⤵       |
+| `\curvearrowrightup`         | ⤴       |
 | `\dacapo`                    | 𝄊       |
 | `\dagger`                    | †       |
 | `\daleth`                    | ℸ       |
@@ -1211,6 +1215,7 @@ Pages = ["latex_symbols.md"]
 | `\doubleplus`                | ⧺       |
 | `\downarrow`                 | ↓       |
 | `\downarrowbarred`           | ⤈       |
+| `\downblackarrow`            | ⬇       |
 | `\downdasharrow`             | ⇣       |
 | `\downdownarrows`            | ⇊       |
 | `\downharpoonleft`           | ⇃       |
@@ -1633,6 +1638,7 @@ Pages = ["latex_symbols.md"]
 | `\leftarrowtriangle`         | ⇽       |
 | `\leftarrowx`                | ⬾       |
 | `\leftbkarrow`               | ⤌       |
+| `\leftblackarrow`            | ⬅       |
 | `\leftcurvedarrow`           | ⬿       |
 | `\leftdasharrow`             | ⇠       |
 | `\leftdbkarrow`              | ⤎       |
@@ -2030,6 +2036,7 @@ Pages = ["latex_symbols.md"]
 | `\rightarrowsupset`          | ⭄       |
 | `\rightarrowtail`            | ↣       |
 | `\rightarrowtriangle`        | ⇾       |
+| `\rightblackarrow`           | ➡       |
 | `\rightdasharrow`            | ⇢       |
 | `\rightdotarrow`             | ⤑       |
 | `\rightharpoonaccent`        | ⃑       |
@@ -2469,6 +2476,7 @@ Pages = ["latex_symbols.md"]
 | `\upand`                     | ⅋       |
 | `\uparrow`                   | ↑       |
 | `\uparrowbarred`             | ⤉       |
+| `\upblackarrow`              | ⬆       |
 | `\updasharrow`               | ⇡       |
 | `\updownarrow`               | ↕       |
 | `\updownarrowbar`            | ↨       |
@@ -2572,6 +2580,7 @@ Pages = ["latex_symbols.md"]
 | `\yen`                       | ¥       |
 | `\yogh`                      | ʒ       |
 | `\zeta`                      | ζ       |
+| `\zwj`                       | ‍       |
 
 ## characters
 
@@ -2843,6 +2852,7 @@ Pages = ["latex_symbols.md"]
 <span title="\thickspace"> </span>
 <span title="\thinspace"> </span>
 <span title="\hspace"> </span>
+<span title="\zwj">‍</span>
 <span title="\endash">–</span>
 <span title="\emdash">—</span>
 <span title="\Vert">‖</span>
@@ -2878,11 +2888,11 @@ Pages = ["latex_symbols.md"]
 <span title="\^7">⁷</span>
 <span title="\^8">⁸</span>
 <span title="\^9">⁹</span>
-<span title="\^&#43;">⁺</span>
+<span title="\^+">⁺</span>
 <span title="\^-">⁻</span>
-<span title="\^&#61;">⁼</span>
-<span title="\^&#40;">⁽</span>
-<span title="\^&#41;">⁾</span>
+<span title="\^=">⁼</span>
+<span title="\^(">⁽</span>
+<span title="\^)">⁾</span>
 <span title="\^n">ⁿ</span>
 <span title="\_0">₀</span>
 <span title="\_1">₁</span>
@@ -2894,11 +2904,11 @@ Pages = ["latex_symbols.md"]
 <span title="\_7">₇</span>
 <span title="\_8">₈</span>
 <span title="\_9">₉</span>
-<span title="\_&#43;">₊</span>
+<span title="\_+">₊</span>
 <span title="\_-">₋</span>
-<span title="\_&#61;">₌</span>
-<span title="\_&#40;">₍</span>
-<span title="\_&#41;">₎</span>
+<span title="\_=">₌</span>
+<span title="\_(">₍</span>
+<span title="\_)">₎</span>
 <span title="\_a">ₐ</span>
 <span title="\_e">ₑ</span>
 <span title="\_o">ₒ</span>
@@ -3615,6 +3625,7 @@ Pages = ["latex_symbols.md"]
 <span title="\varstar">✶</span>
 <span title="\dingasterisk">✽</span>
 <span title="\draftingarrow">➛</span>
+<span title="\rightblackarrow">➡</span>
 <span title="\threedangle">⟀</span>
 <span title="\whiteinwhitetriangle">⟁</span>
 <span title="\perp">⟂</span>
@@ -3693,6 +3704,10 @@ Pages = ["latex_symbols.md"]
 <span title="\rdiagovsearrow">⤰</span>
 <span title="\neovnwarrow">⤱</span>
 <span title="\nwovnearrow">⤲</span>
+<span title="\curvearrowrightup">⤴</span>
+<span title="\curvearrowrightdown">⤵</span>
+<span title="\curvearrowdownleft">⤶</span>
+<span title="\curvearrowdownright">⤷</span>
 <span title="\Rlarr">⥂</span>
 <span title="\rLarr">⥄</span>
 <span title="\rightarrowplus">⥅</span>
@@ -4027,6 +4042,9 @@ Pages = ["latex_symbols.md"]
 <span title="\gggnest">⫸</span>
 <span title="\leqqslant">⫹</span>
 <span title="\geqqslant">⫺</span>
+<span title="\leftblackarrow">⬅</span>
+<span title="\upblackarrow">⬆</span>
+<span title="\downblackarrow">⬇</span>
 <span title="\squaretopblack">⬒</span>
 <span title="\squarebotblack">⬓</span>
 <span title="\squareurblack">⬔</span>
@@ -4096,7 +4114,7 @@ Pages = ["latex_symbols.md"]
 <span title="\postalmark">〒</span>
 <span title="\^uparrow">ꜛ</span>
 <span title="\^downarrow">ꜜ</span>
-<span title="\^&#33;">ꜝ</span>
+<span title="\^!">ꜝ</span>
 <span title="\^C">ꟲ</span>
 <span title="\^F">ꟳ</span>
 <span title="\^Q">ꟴ</span>

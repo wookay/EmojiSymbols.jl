@@ -7,8 +7,10 @@ const OR = Vector
 """
 abstract type AbstractPatchAction end
 
-for action in (:Load2fc32f2ea2,
+for action in (:Load_2fc32f2ea2,
+               :Load_a966e11862,
                :AddEmojiSymbols,
+               :RemoveEmojiSymbols,
                :AddLatexSymbols,
                :RemoveLatexSymbols,
                :AddSymbolsLatexCanonical)
@@ -24,11 +26,18 @@ for action in (:Load2fc32f2ea2,
 end
 
 """
-    struct Load2fc32f2ea2 <: AbstractPatchAction
+    struct Load_2fc32f2ea2 <: AbstractPatchAction
 
 used in [`apply_patches_to_repl_completions`](@ref)
 """
-Load2fc32f2ea2
+Load_2fc32f2ea2
+
+"""
+    struct Load_a966e11862 <: AbstractPatchAction
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+Load_a966e11862
 
 """
     struct AddEmojiSymbols <: AbstractPatchAction
@@ -36,6 +45,13 @@ Load2fc32f2ea2
 used in [`apply_patches_to_repl_completions`](@ref)
 """
 AddEmojiSymbols
+
+"""
+    struct RemoveEmojiSymbols <: AbstractPatchAction
+
+used in [`apply_patches_to_repl_completions`](@ref)
+"""
+RemoveEmojiSymbols
 
 """
     struct AddLatexSymbols <: AbstractPatchAction

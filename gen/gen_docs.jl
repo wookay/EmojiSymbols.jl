@@ -78,7 +78,8 @@ function gen_patches()
         )))
         for action in patch.actions
             push!(contents, List(Paragraph((String ∘ nameof ∘ typeof)(action))))
-            if action isa EmojiSymbols.Load2fc32f2ea2
+            if action isa EmojiSymbols.Load_2fc32f2ea2
+            elseif action isa EmojiSymbols.Load_a966e11862
             else
                 push!(contents, Code("julia", join(action.symbol_pairs, "\n")))
             end

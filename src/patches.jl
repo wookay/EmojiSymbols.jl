@@ -17,12 +17,7 @@ function patches_to_be_loaded(; down_to::VersionNumber = VERSION,
     end
 end
 
-function load_2fc32f2ea2(mod::Module, isdefined_symbols_latex_canonical::Bool)::Int
-    m = Module()
-    for filename in ("emoji_symbols.jl", "latex_symbols.jl")
-        code = read(normpath(@__DIR__, "../gen/2fc32f2ea2_1.7.0-DEV.849", filename), String)
-        include_string(m, code, filename)
-    end
+function load_symbols(m::Module, mod::Module, isdefined_symbols_latex_canonical::Bool)::Int
     cnt::Int = 0
     cnt += length(setdiff(keys(m.emoji_symbols), keys(mod.emoji_symbols)))
     cnt += length(setdiff(keys(m.latex_symbols), keys(mod.latex_symbols)))
@@ -38,6 +33,24 @@ function load_2fc32f2ea2(mod::Module, isdefined_symbols_latex_canonical::Bool)::
     cnt
 end
 
+function load_2fc32f2ea2(mod::Module, isdefined_symbols_latex_canonical::Bool)::Int
+    m = Module()
+    for filename in ("emoji_symbols.jl", "latex_symbols.jl")
+        code = read(normpath(@__DIR__, "../gen/2fc32f2ea2_1.7.0-DEV.849", filename), String)
+        include_string(m, code, filename)
+    end
+    invokelatest(load_symbols, m, mod, isdefined_symbols_latex_canonical)
+end
+
+function load_a966e11862(mod::Module, isdefined_symbols_latex_canonical::Bool)::Int
+    m = Module()
+    for filename in ("emoji_symbols.jl", "latex_symbols.jl")
+        code = read(normpath(@__DIR__, "../gen/a966e11862_1.14.0-DEV.3371", filename), String)
+        include_string(m, code, filename)
+    end
+    invokelatest(load_symbols, m, mod, isdefined_symbols_latex_canonical)
+end
+
 """
     apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module)::Int
 
@@ -49,8 +62,10 @@ function apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module):
     for patch in reverse(patches)
         for action in patch.actions
             Ta = typeof(action)
-            if Ta === Load2fc32f2ea2
+            if Ta === Load_2fc32f2ea2
                 cnt += load_2fc32f2ea2(mod, isdefined_symbols_latex_canonical)
+            elseif Ta === Load_a966e11862
+                cnt += load_a966e11862(mod, isdefined_symbols_latex_canonical)
             else
                 for (k, v) in action.symbol_pairs
                     if Ta === AddEmojiSymbols

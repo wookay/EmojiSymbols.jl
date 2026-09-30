@@ -1,7 +1,13 @@
 using Documenter
 using EmojiSymbols
 using .EmojiSymbols: AbstractPatchAction,
-                     Load2fc32f2ea2, AddEmojiSymbols, AddLatexSymbols, RemoveLatexSymbols, AddSymbolsLatexCanonical
+                     Load_2fc32f2ea2,
+                     Load_a966e11862,
+                     AddEmojiSymbols,
+                     RemoveEmojiSymbols,
+                     AddLatexSymbols,
+                     RemoveLatexSymbols,
+                     AddSymbolsLatexCanonical
 
 makedocs(
     build = joinpath(@__DIR__, "local" in ARGS ? "build_local" : "build"),

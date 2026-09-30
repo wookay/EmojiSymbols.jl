@@ -2,15 +2,18 @@
 
 const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     # v1.14
+    Patch(v"1.14.0-DEV.3371", # a966e1186293f0a5fde44ca4823762ced1fa961e    new emoji completions!
+        "a966e11862",
+        Load_a966e11862()),
     Patch(v"1.14.0-DEV.3246", # 289916806447593343fb41475bb40387e87552d2    Support `\escape` for `⎋` and `\xmark` for `✗`
-         "2899168064",
-         AddLatexSymbols("\\escape" => "⎋",
-                         "\\xmark" => "✗")),
-     Patch(v"1.14.0-DEV.22",  # ed705d859ab9d2f03d134ee45d9f51ebed300f1a    Add superscript capital C, F, Q
-         "ed705d859a",
-         AddLatexSymbols("\\^C" => "ꟲ",
-                         "\\^F" => "ꟳ",
-                         "\\^Q" => "ꟴ")),
+        "2899168064",
+        AddLatexSymbols("\\escape" => "⎋",
+                        "\\xmark" => "✗")),
+    Patch(v"1.14.0-DEV.22",   # ed705d859ab9d2f03d134ee45d9f51ebed300f1a    Add superscript capital C, F, Q
+        "ed705d859a",
+        AddLatexSymbols("\\^C" => "ꟲ",
+                        "\\^F" => "ꟳ",
+                        "\\^Q" => "ꟴ")),
 
     # v1.13
     Patch(v"1.13.0-DEV.1250", # 0e30e0f39dd92a868373739cf8989c64dd29eaa2    Support superscript small q
@@ -190,7 +193,7 @@ const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
                                  "⊽" => "\\nor")),
     Patch(v"1.7.0-DEV.849",   # 2fc32f2ea247c0c03ea78b229ff159af84c45fb1
         "2fc32f2ea2",
-        Load2fc32f2ea2())
+        Load_2fc32f2ea2())
 ])
 
 # LATEST_PATCH_VERSION::VersionNumber
