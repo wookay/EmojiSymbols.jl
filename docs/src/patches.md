@@ -16,6 +16,19 @@ Depth = 2:3
 Pages = ["patches.md"]
 ```
 
+### `1.14.0-DEV.3452 LaTeX`
+
+  * julia commit [899719cfae](https://github.com/JuliaLang/julia/commit/899719cfae)
+
+  * AddLatexSymbols
+
+```julia
+"\\_w" => "₝"
+"\\_y" => "₞"
+"\\_z" => "₟"
+"\\_pgamma" => "𝿐"
+```
+
 ### `1.14.0-DEV.3371 Commit`
 
   * julia commit [a966e11862](https://github.com/JuliaLang/julia/commit/a966e11862)

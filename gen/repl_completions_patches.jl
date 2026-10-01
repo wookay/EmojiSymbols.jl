@@ -2,6 +2,12 @@
 
 const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     # v1.14
+    Patch(v"1.14.0-DEV.3452", # 899719cfaed1dbef76d772153ccf574566ba300e    Unicode 18 support: doc data, new subscripts as REPL shortcuts and operator suffixes
+        "899719cfae",
+        AddLatexSymbols("\\_w" => "₝",
+                        "\\_y" => "₞",
+                        "\\_z" => "₟",
+                        "\\_pgamma" => "𝿐")),
     Patch(v"1.14.0-DEV.3371", # a966e1186293f0a5fde44ca4823762ced1fa961e    new emoji completions!
         "a966e11862",
         LoadCommit("a966e11862", v"1.14.0-DEV.3371")),

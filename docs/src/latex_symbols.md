@@ -292,6 +292,7 @@ Pages = ["latex_symbols.md"]
 | `\_n`                        | ₙ       |
 | `\_o`                        | ₒ       |
 | `\_p`                        | ₚ       |
+| `\_pgamma`                   | 𝿐       |
 | `\_phi`                      | ᵩ       |
 | `\_r`                        | ᵣ       |
 | `\_rho`                      | ᵨ       |
@@ -300,7 +301,10 @@ Pages = ["latex_symbols.md"]
 | `\_t`                        | ₜ       |
 | `\_u`                        | ᵤ       |
 | `\_v`                        | ᵥ       |
+| `\_w`                        | ₝       |
 | `\_x`                        | ₓ       |
+| `\_y`                        | ₞       |
+| `\_z`                        | ₟       |
 | `\aa`                        | å       |
 | `\accurrent`                 | ⏦       |
 | `\acidfree`                  | ♾       |
@@ -2922,6 +2926,9 @@ Pages = ["latex_symbols.md"]
 <span title="\_p">ₚ</span>
 <span title="\_s">ₛ</span>
 <span title="\_t">ₜ</span>
+<span title="\_w">₝</span>
+<span title="\_y">₞</span>
+<span title="\_z">₟</span>
 <span title="\pes">₧</span>
 <span title="\euro">€</span>
 <span title="\leftharpoonaccent">⃐</span>
@@ -5148,5 +5155,6 @@ Pages = ["latex_symbols.md"]
 <span title="\ttseven">𝟽</span>
 <span title="\tteight">𝟾</span>
 <span title="\ttnine">𝟿</span>
+<span title="\_pgamma">𝿐</span>
 <span title="\hookunderrightarrow">🢲</span>
 ```
