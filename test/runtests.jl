@@ -1,2 +1,4 @@
 using Jive
-runtests(@__DIR__, targets="repl emojisymbols pkgs", into=Main)
+targets = string("repl emojisymbols", haskey(ENV, "CI") ? " pkgs" : "")
+into = Main
+runtests(@__DIR__; targets, into)
