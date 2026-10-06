@@ -2,6 +2,31 @@
 
 const REPL_COMPLETIONS_PATCHES = Vector{Patch}([
     # v1.14
+    Patch(v"1.14.0-DEV.3510", # da5d5e48fb4e606233653f10e5607e4a6bc5e0cd    REPL: Add Unicode 18 emoji symbols
+        "da5d5e48fb",
+        RemoveEmojiSymbols("\\:distorted_face:" => "\U1faea",
+                           "\\:fight_cloud:" => "\U1faef",
+                           "\\:hairy_creature:" => "\U1fac8",
+                           "\\:landslide:" => "\U1f6d8",
+                           "\\:orca:" => "\U1facd",
+                           "\\:treasure_chest:" => "\U1fa8e",
+                           "\\:trombone:" => "\U1fa8a"),
+        AddEmojiSymbols("\\:cracking_face:" => "🫫",
+                        "\\:distorted_face:" => "🫪",
+                        "\\:eraser:" => "🪌",
+                        "\\:fight_cloud:" => "🫯",
+                        "\\:hairy_creature:" => "🫈",
+                        "\\:landslide:" => "🛘",
+                        "\\:leftwards_thumb_sign:" => "🫹",
+                        "\\:lighthouse:" => "🛙",
+                        "\\:meteor:" => "🪋",
+                        "\\:monarch_butterfly:" => "🫌",
+                        "\\:net_with_handle:" => "🪍",
+                        "\\:orca:" => "🫍",
+                        "\\:pickle:" => "🫝",
+                        "\\:rightwards_thumb_sign:" => "🫺",
+                        "\\:treasure_chest:" => "🪎",
+                        "\\:trombone:" => "🪊")),
     Patch(v"1.14.0-DEV.3452", # 899719cfaed1dbef76d772153ccf574566ba300e    Unicode 18 support: doc data, new subscripts as REPL shortcuts and operator suffixes
         "899719cfae",
         AddLatexSymbols("\\_w" => "₝",

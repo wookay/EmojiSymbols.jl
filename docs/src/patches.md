@@ -16,6 +16,43 @@ Depth = 2:3
 Pages = ["patches.md"]
 ```
 
+### `1.14.0-DEV.3510 Emoji`
+
+  * julia commit [da5d5e48fb](https://github.com/JuliaLang/julia/commit/da5d5e48fb)
+
+  * RemoveEmojiSymbols
+
+```julia
+"\\:distorted_face:" => "🫪"
+"\\:fight_cloud:" => "🫯"
+"\\:hairy_creature:" => "🫈"
+"\\:landslide:" => "🛘"
+"\\:orca:" => "🫍"
+"\\:treasure_chest:" => "🪎"
+"\\:trombone:" => "🪊"
+```
+
+  * AddEmojiSymbols
+
+```julia
+"\\:cracking_face:" => "🫫"
+"\\:distorted_face:" => "🫪"
+"\\:eraser:" => "🪌"
+"\\:fight_cloud:" => "🫯"
+"\\:hairy_creature:" => "🫈"
+"\\:landslide:" => "🛘"
+"\\:leftwards_thumb_sign:" => "🫹"
+"\\:lighthouse:" => "🛙"
+"\\:meteor:" => "🪋"
+"\\:monarch_butterfly:" => "🫌"
+"\\:net_with_handle:" => "🪍"
+"\\:orca:" => "🫍"
+"\\:pickle:" => "🫝"
+"\\:rightwards_thumb_sign:" => "🫺"
+"\\:treasure_chest:" => "🪎"
+"\\:trombone:" => "🪊"
+```
+
 ### `1.14.0-DEV.3452 LaTeX`
 
   * julia commit [899719cfae](https://github.com/JuliaLang/julia/commit/899719cfae)

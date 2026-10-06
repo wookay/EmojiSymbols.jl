@@ -337,6 +337,7 @@ Pages = ["emoji_symbols.md"]
 | `\:cow2:`                                                   | 🐄        |
 | `\:cow:`                                                    | 🐮        |
 | `\:crab:`                                                   | 🦀        |
+| `\:cracking_face:`                                          | 🫫        |
 | `\:credit_card:`                                            | 💳        |
 | `\:crescent_moon:`                                          | 🌙        |
 | `\:cricket:`                                                | 🦗        |
@@ -442,6 +443,7 @@ Pages = ["emoji_symbols.md"]
 | `\:empty_nest:`                                             | 🪹        |
 | `\:end:`                                                    | 🔚        |
 | `\:envelope_with_arrow:`                                    | 📩        |
+| `\:eraser:`                                                 | 🪌        |
 | `\:es:`                                                     | 🇪🇸       |
 | `\:euro:`                                                   | 💶        |
 | `\:european_castle:`                                        | 🏰        |
@@ -1046,6 +1048,7 @@ Pages = ["emoji_symbols.md"]
 | `\:leftwards_arrow_with_hook:`                              | ↩️       |
 | `\:leftwards_hand:`                                         | 🫲        |
 | `\:leftwards_pushing_hand:`                                 | 🫷        |
+| `\:leftwards_thumb_sign:`                                   | 🫹        |
 | `\:leg:`                                                    | 🦵        |
 | `\:lemon:`                                                  | 🍋        |
 | `\:leo:`                                                    | ♌        |
@@ -1054,6 +1057,7 @@ Pages = ["emoji_symbols.md"]
 | `\:libra:`                                                  | ♎        |
 | `\:light_blue_heart:`                                       | 🩵        |
 | `\:light_rail:`                                             | 🚈        |
+| `\:lighthouse:`                                             | 🛙        |
 | `\:lightning:`                                              | 🌩️       |
 | `\:lime:`                                                   | 🍋‍🟩      |
 | `\:link:`                                                   | 🔗        |
@@ -1221,6 +1225,7 @@ Pages = ["emoji_symbols.md"]
 | `\:mermaid:`                                                | 🧜‍♀️     |
 | `\:merman:`                                                 | 🧜‍♂️     |
 | `\:merperson:`                                              | 🧜        |
+| `\:meteor:`                                                 | 🪋        |
 | `\:metro:`                                                  | 🚇        |
 | `\:microbe:`                                                | 🦠        |
 | `\:microphone:`                                             | 🎤        |
@@ -1233,6 +1238,7 @@ Pages = ["emoji_symbols.md"]
 | `\:mirror:`                                                 | 🪞        |
 | `\:mirror_ball:`                                            | 🪩        |
 | `\:mobile_phone_off:`                                       | 📴        |
+| `\:monarch_butterfly:`                                      | 🫌        |
 | `\:money_mouth_face:`                                       | 🤑        |
 | `\:money_with_wings:`                                       | 💸        |
 | `\:moneybag:`                                               | 💰        |
@@ -1278,6 +1284,7 @@ Pages = ["emoji_symbols.md"]
 | `\:nerd_face:`                                              | 🤓        |
 | `\:nest_with_eggs:`                                         | 🪺        |
 | `\:nesting_dolls:`                                          | 🪆        |
+| `\:net_with_handle:`                                        | 🪍        |
 | `\:neutral_face:`                                           | 😐        |
 | `\:new:`                                                    | 🆕        |
 | `\:new_moon:`                                               | 🌑        |
@@ -1400,6 +1407,7 @@ Pages = ["emoji_symbols.md"]
 | `\:phoenix:`                                                | 🐦‍🔥      |
 | `\:phone:`                                                  | ☎️       |
 | `\:pick:`                                                   | ⛏️       |
+| `\:pickle:`                                                 | 🫝        |
 | `\:pickup_truck:`                                           | 🛻        |
 | `\:pie:`                                                    | 🥧        |
 | `\:pig2:`                                                   | 🐖        |
@@ -1504,6 +1512,7 @@ Pages = ["emoji_symbols.md"]
 | `\:right_anger_bubble:`                                     | 🗯️       |
 | `\:rightwards_hand:`                                        | 🫱        |
 | `\:rightwards_pushing_hand:`                                | 🫸        |
+| `\:rightwards_thumb_sign:`                                  | 🫺        |
 | `\:ring:`                                                   | 💍        |
 | `\:ring_buoy:`                                              | 🛟        |
 | `\:ringed_planet:`                                          | 🪐        |
@@ -3405,6 +3414,7 @@ Pages = ["emoji_symbols.md"]
 <span title="\:hut:">🛖</span>
 <span title="\:elevator:">🛗</span>
 <span title="\:landslide:">🛘</span>
+<span title="\:lighthouse:">🛙</span>
 <span title="\:wireless:">🛜</span>
 <span title="\:playground_slide:">🛝</span>
 <span title="\:wheel:">🛞</span>
@@ -3789,6 +3799,9 @@ Pages = ["emoji_symbols.md"]
 <span title="\:flute:">🪈</span>
 <span title="\:harp:">🪉</span>
 <span title="\:trombone:">🪊</span>
+<span title="\:meteor:">🪋</span>
+<span title="\:eraser:">🪌</span>
+<span title="\:net_with_handle:">🪍</span>
 <span title="\:treasure_chest:">🪎</span>
 <span title="\:shovel:">🪏</span>
 <span title="\:ringed_planet:">🪐</span>
@@ -3847,6 +3860,7 @@ Pages = ["emoji_symbols.md"]
 <span title="\:person_with_crown:">🫅</span>
 <span title="\:fingerprint:">🫆</span>
 <span title="\:hairy_creature:">🫈</span>
+<span title="\:monarch_butterfly:">🫌</span>
 <span title="\:orca:">🫍</span>
 <span title="\:moose:">🫎</span>
 <span title="\:donkey:">🫏</span>
@@ -3863,6 +3877,7 @@ Pages = ["emoji_symbols.md"]
 <span title="\:ginger_root:">🫚</span>
 <span title="\:pea_pod:">🫛</span>
 <span title="\:root_vegetable:">🫜</span>
+<span title="\:pickle:">🫝</span>
 <span title="\:splatter:">🫟</span>
 <span title="\:melting_face:">🫠</span>
 <span title="\:saluting_face:">🫡</span>
@@ -3875,6 +3890,7 @@ Pages = ["emoji_symbols.md"]
 <span title="\:shaking_face:">🫨</span>
 <span title="\:face_with_bags_under_eyes:">🫩</span>
 <span title="\:distorted_face:">🫪</span>
+<span title="\:cracking_face:">🫫</span>
 <span title="\:fight_cloud:">🫯</span>
 <span title="\:hand_with_index_finger_and_thumb_crossed:">🫰</span>
 <span title="\:rightwards_hand:">🫱</span>
@@ -3885,4 +3901,6 @@ Pages = ["emoji_symbols.md"]
 <span title="\:heart_hands:">🫶</span>
 <span title="\:leftwards_pushing_hand:">🫷</span>
 <span title="\:rightwards_pushing_hand:">🫸</span>
+<span title="\:leftwards_thumb_sign:">🫹</span>
+<span title="\:rightwards_thumb_sign:">🫺</span>
 ```
