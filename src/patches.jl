@@ -19,10 +19,25 @@ end
 
 function load_symbols(m::Module, mod::Module, isdefined_symbols_latex_canonical::Bool)::Int
     cnt::Int = 0
-    cnt += length(setdiff(keys(m.emoji_symbols), keys(mod.emoji_symbols)))
-    cnt += length(setdiff(keys(m.latex_symbols), keys(mod.latex_symbols)))
+    emoji_setdiff = setdiff(keys(m.emoji_symbols), keys(mod.emoji_symbols))
+    for k in emoji_setdiff
+        v = m.emoji_symbols[k]
+        REPL.symbols_latex[v] = k
+    end
+    cnt += length(emoji_setdiff)
+    latex_setdiff = setdiff(keys(m.latex_symbols), keys(mod.latex_symbols))
+    for k in latex_setdiff
+        v = m.latex_symbols[k]
+        REPL.symbols_latex[v] = k
+    end
+    cnt += length(latex_setdiff)
     if isdefined_symbols_latex_canonical
-        cnt += length(setdiff(keys(m.symbols_latex_canonical), keys(mod.symbols_latex_canonical)))
+        latex_canonical_setdiff = setdiff(keys(m.symbols_latex_canonical), keys(mod.symbols_latex_canonical))
+        for k in latex_canonical_setdiff
+            v = m.symbols_latex_canonical[k]
+            REPL.symbols_latex[v] = k
+        end
+        cnt += length(latex_canonical_setdiff)
     end
     empty!(mod.emoji_symbols)
     empty!(mod.latex_symbols)
@@ -64,11 +79,16 @@ function apply_patches_to_repl_completions(patches::Vector{Patch}, mod::Module):
                     elseif Ta === AddLatexSymbols
                         setindex!(mod.latex_symbols, v, k)
                         REPL.symbols_latex[v] = k
+                    elseif Ta === RemoveEmojiSymbols
+                        delete!(mod.emoji_symbols, k)
+                        # delete!(REPL.symbols_latex, v)
                     elseif Ta === RemoveLatexSymbols
                         delete!(mod.latex_symbols, k)
+                        # delete!(REPL.symbols_latex, v)
                     elseif Ta === AddSymbolsLatexCanonical
                         if isdefined_symbols_latex_canonical
                             setindex!(mod.symbols_latex_canonical, v, k)
+                            REPL.symbols_latex[v] = k
                         end
                     end
                     cnt += 1
