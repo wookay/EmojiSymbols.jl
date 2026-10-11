@@ -21,9 +21,18 @@ function load_symbols(m::Module, mod::Module, isdefined_symbols_latex_canonical:
     cnt::Int = 0
     emoji_setdiff = Set{String}([])
     for (k, v) in m.emoji_symbols
-        if haskey(mod.emoji_symbols, k) && mod.emoji_symbols[k] == v
-            if !(haskey(REPL.symbols_latex, v))
-                REPL.symbols_latex[v] = k
+        if haskey(mod.emoji_symbols, k)
+            oldv = mod.emoji_symbols[k]
+            if oldv == v
+                if haskey(REPL.symbols_latex, v)
+                else
+                    REPL.symbols_latex[v] = k
+                end
+            else
+                push!(emoji_setdiff, k)
+                if haskey(REPL.symbols_latex, oldv)
+                    delete!(REPL.symbols_latex, oldv)
+                end
             end
         else
             push!(emoji_setdiff, k)

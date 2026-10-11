@@ -13,13 +13,12 @@ end
 
 const mod = REPL
 
-printer = "\U1F5A8"            # 🖨   \:printer:
 printer_fe0f = "\U1F5A8\UFE0F" # '🖨 ': Unicode U+1F5A8 (category So: Symbol, other)
                                # '️': Unicode U+FE0F (category Mn: Mark, nonspacing)
 upblackarrow = "\U2B06"        #⬆  \upblackarrow
 arrow_up = "\U2B06\UFE0F"      # ⬆️  \:arrow_up:
 
-@test symbol_latex(printer) == "" # "\\:printer:"
+@test symbol_latex(string(first(printer_fe0f))) == ""
 
 if VERSION >= v"1.14.0-DEV.3371" # julia commit a966e11862    new emoji completions!
 @test symbol_latex(printer_fe0f) == "\\:printer:"
@@ -40,8 +39,7 @@ elseif VERSION >= v"1.12"
 end
 
 if VERSION >= v"1.12"
-@test sprint(mod.show_repl, MIME("text/plain"), only(printer)) == "'🖨': Unicode U+1F5A8 (category So: Symbol, other)" # input as \\:printer:<tab>
-@test sprint(mod.show_repl, MIME("text/plain"), printer)      == repr(printer)
+@test sprint(mod.show_repl, MIME("text/plain"), first(printer_fe0f)) == "'🖨': Unicode U+1F5A8 (category So: Symbol, other)"
 @test sprint(mod.show_repl, MIME("text/plain"), printer_fe0f) == repr(printer_fe0f)
 @test sprint(mod.show_repl, MIME("text/plain"), upblackarrow) == repr(upblackarrow)
 @test sprint(mod.show_repl, MIME("text/plain"), arrow_up)     == repr(arrow_up)

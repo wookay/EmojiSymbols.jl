@@ -10,7 +10,6 @@ export patches_to_be_loaded, apply_patches_to_repl_completions
 include("patches.jl")
 
 include("REPL.jl")
-include("fix_fe0f.jl")
 include("init.jl")
 
 end # module EmojiSymbols

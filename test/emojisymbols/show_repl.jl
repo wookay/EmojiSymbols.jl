@@ -17,21 +17,24 @@ using REPL: REPLCompletions
 escape = REPLCompletions.latex_symbols["\\escape"]
 @test escape == "⎋"
 
-printer = "\U1F5A8" # 🖨  \:printer:
-@test sprint(mod.show_repl, MIME("text/plain"), only(printer)) == "'🖨': Unicode U+1F5A8 (category So: Symbol, other), input as \\:printer:<tab>"
-@test symbol_latex(printer) == "\\:printer:"
-
-printer_fe0f = "\U1F5A8\UFE0F"
-# '🖨': Unicode U+1F5A8 (category So: Symbol, other)
-# '️': Unicode U+FE0F (category Mn: Mark, nonspacing)
-@test sprint(mod.show_repl, MIME("text/plain"), printer_fe0f) == "\"🖨️\", input as \\:printer:<tab>"
+printer_fe0f = "\U1F5A8\UFE0F" # 🖨    \:printer:    # '🖨': Unicode U+1F5A8 (category So: Symbol, other)
+                                                     # '️': Unicode U+FE0F (category Mn: Mark, nonspacing)
+@test sprint(mod.show_repl, MIME("text/plain"), printer_fe0f)        == "\"🖨️\", input as \\:printer:<tab>"
+@test sprint(mod.show_repl, MIME("text/plain"), first(printer_fe0f)) == "'🖨': Unicode U+1F5A8 (category So: Symbol, other)"
 @test symbol_latex(printer_fe0f) == "\\:printer:"
+@test symbol_latex(string(first(printer_fe0f))) == ""
 
-upblackarrow = "\U2B06" #⬆  \upblackarrow
+b_fe0f = "\U1F171\UFE0F" # 🅱️   \:b:
+@test sprint(mod.show_repl, MIME("text/plain"), b_fe0f)        == "\"🅱️\", input as \\:b:<tab>"
+@test sprint(mod.show_repl, MIME("text/plain"), first(b_fe0f)) == "'🅱': Unicode U+1F171 (category So: Symbol, other)"
+@test symbol_latex(b_fe0f) == "\\:b:"
+@test symbol_latex(string(first(b_fe0f))) == ""
+
+upblackarrow = "\U2B06" #⬆   \upblackarrow
 @test sprint(mod.show_repl, MIME("text/plain"), only(upblackarrow)) == "'⬆': Unicode U+2B06 (category So: Symbol, other), input as \\upblackarrow<tab>"
 @test symbol_latex(upblackarrow) == "\\upblackarrow"
 
-arrow_up = "\U2B06\UFE0F" # ⬆️  \:arrow_up:
+arrow_up = "\U2B06\UFE0F" # ⬆️   \:arrow_up:
 @test sprint(mod.show_repl, MIME("text/plain"), arrow_up) == "\"⬆️\", input as \\:arrow_up:<tab>"
 @test symbol_latex(arrow_up) == "\\:arrow_up:"
 
