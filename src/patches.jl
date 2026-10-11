@@ -19,25 +19,46 @@ end
 
 function load_symbols(m::Module, mod::Module, isdefined_symbols_latex_canonical::Bool)::Int
     cnt::Int = 0
-    emoji_setdiff = setdiff(keys(m.emoji_symbols), keys(mod.emoji_symbols))
+    emoji_setdiff = Set{String}([])
+    for (k, v) in m.emoji_symbols
+        if haskey(mod.emoji_symbols, k) && mod.emoji_symbols[k] == v
+            if !(haskey(REPL.symbols_latex, v))
+                REPL.symbols_latex[v] = k
+            end
+        else
+            push!(emoji_setdiff, k)
+        end
+    end
+    cnt += length(emoji_setdiff)
     for k in emoji_setdiff
         v = m.emoji_symbols[k]
         REPL.symbols_latex[v] = k
     end
-    cnt += length(emoji_setdiff)
-    latex_setdiff = setdiff(keys(m.latex_symbols), keys(mod.latex_symbols))
+    latex_setdiff = Set{String}([])
+    for (k, v) in m.latex_symbols
+        if haskey(mod.latex_symbols, k) && mod.latex_symbols[k] == v
+        else
+            push!(latex_setdiff, k)
+        end
+    end
+    cnt += length(latex_setdiff)
     for k in latex_setdiff
         v = m.latex_symbols[k]
         REPL.symbols_latex[v] = k
     end
-    cnt += length(latex_setdiff)
     if isdefined_symbols_latex_canonical
-        latex_canonical_setdiff = setdiff(keys(m.symbols_latex_canonical), keys(mod.symbols_latex_canonical))
+        latex_canonical_setdiff = Set{String}([])
+        for (k, v) in m.symbols_latex_canonical
+            if haskey(mod.symbols_latex_canonical, k) && mod.symbols_latex_canonical[k] == v
+            else
+                push!(latex_canonical_setdiff, k)
+            end
+        end
+        cnt += length(latex_canonical_setdiff)
         for k in latex_canonical_setdiff
             v = m.symbols_latex_canonical[k]
             REPL.symbols_latex[v] = k
         end
-        cnt += length(latex_canonical_setdiff)
     end
     empty!(mod.emoji_symbols)
     empty!(mod.latex_symbols)
@@ -55,7 +76,7 @@ function load_commit(action::LoadCommit, mod::Module, isdefined_symbols_latex_ca
         code = read(joinpath(dir, filename), String)
         include_string(m, code, filename)
     end
-    invokelatest(load_symbols, m, mod, isdefined_symbols_latex_canonical)
+    Base.invokelatest(load_symbols, m, mod, isdefined_symbols_latex_canonical)
 end
 
 """

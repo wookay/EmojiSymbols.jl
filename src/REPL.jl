@@ -2,20 +2,45 @@
 
 using REPL: REPL
 
-
 # from julia/stdlib/REPL/src/REPL.jl
 
-# REPL
 # +show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar)
-if VERSION >= v"1.13.0-DEV.620"     # julia commit 4c0017684829a410b5d7a2df16ce6e819a77fb73
+# VERSION >= v"1.13.0-DEV.620"    # julia commit 4c0017684829a410b5d7a2df16ce6e819a77fb73
 
-# REPL
 # +show_repl(io::IO, mime::MIME"text/plain", x)
-elseif VERSION >= v"1.12.0-DEV.901" # julia commit 9dd49c056f7b95ccbac85de44ed123f34f419c5f
-import .REPL: show_repl
+# VERSION >= v"1.12.0-DEV.901"    # julia commit 9dd49c056f7b95ccbac85de44ed123f34f419c5f
 
-elseif VERSION >= v"1.11.0"
+# function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar)
+function show_repl_input_as(io::IO, mime::MIME"text/plain", s::String)
+    # Check for LaTeX/emoji alias and print if found and using symbol_latex which is used in help?> mode
+    latex = REPL.symbol_latex(s)  #
+    if !isempty(latex)
+        print(io, ", input as ")
+        printstyled(io, latex, "<tab>"; color=:cyan)
+    end
+end
+
+if VERSION >= v"1.12.0-DEV.901"
+import .REPL: show_repl
+else
 function show_repl end
+end
+
+function show_repl(io::IO, mime::MIME"text/plain", s::String)
+    show(io, mime, s)
+    show_repl_input_as(io, mime, s)
+end # function show_repl(io::IO, mime::MIME"text/plain", s::String)
+
+if v"1.13.0-DEV.620" > VERSION >= v"1.11.0"
+function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar)
+    show(io, mime, c) # Call the original Base.show
+    s = string(c)
+    show_repl_input_as(io, mime, s)
+end # function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar)
+end # if
+
+
+if VERSION < v"1.12"
 using .REPL: REPLDisplay, LineEditREPL, LineEdit, with_repl_linfo, answer_color
 import Base: display
 function show_limited(io::IO, mime::MIME, x)
@@ -52,20 +77,6 @@ function display(d::REPLDisplay, mime::MIME"text/plain", x::AbstractChar)
     end
     return nothing
 end # function display(d::REPLDisplay, mime::MIME"text/plain", x::AbstractChar)
-end
-
-
-if v"1.13.0-DEV.620" > VERSION >= v"1.11.0"
-using .REPL: symbol_latex
-function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar)
-    show(io, mime, c) # Call the original Base.show
-    # Check for LaTeX/emoji alias and print if found and using symbol_latex which is used in help?> mode
-    latex = symbol_latex(string(c))
-    if !isempty(latex)
-        print(io, ", input as ")
-        printstyled(io, latex, "<tab>"; color=:cyan)
-    end
-end # function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar)
-end
+end # if VERSION < v"1.12"
 
 # module EmojiSymbols
