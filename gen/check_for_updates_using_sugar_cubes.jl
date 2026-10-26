@@ -29,21 +29,6 @@ end
 
 if VERSION >= v"1.14-DEV"
 
-f = :(function show_limited(io::IO, mime::MIME, x) end)
-check_the_code_block_diff(
-    "src/REPL.jl",
-    :(if VERSION < v"1.12" function show_limited(io::IO, mime::MIME, x) end end),
-    "sources/stdlib/REPL/src/REPL.jl",
-    :(module REPL $f end)
-)
-
-check_the_code_block_diff(
-    "src/REPL.jl",
-    :(if VERSION < v"1.12" function display(d::REPLDisplay, mime::MIME"text/plain", x::AbstractChar) end end),
-    "sources/stdlib/REPL/src/REPL.jl",
-    :(module REPL function display(d::REPLDisplay, mime::MIME"text/plain", x) end end)
-)
-
 f = :(function show_repl(io::IO, mime::MIME"text/plain", c::AbstractChar) end)
 check_the_code_block_diff(
     "src/REPL.jl",
